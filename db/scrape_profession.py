@@ -185,7 +185,7 @@ if __name__ == "__main__":
     ]
 
     PARSER = argparse.ArgumentParser(
-        description='This script is used to scrape wowhead to build profession databases.')
+        description='This script is used to scrape WowHead to build profession databases.')
     PARSER.add_argument('-p', '--profession', choices=AVAILABLE_PROFESSIONS)
 
     main(PARSER.parse_args())
