@@ -1,9 +1,8 @@
 import re
+import json
 import requests
 import sys
 from bs4 import BeautifulSoup
-from math import ceil
-from string import printable
 
 
 def main(args: dict) -> None:
@@ -28,33 +27,15 @@ def main(args: dict) -> None:
     print(url)
 
     # Grab the last table
-    datatable = soup.findAll('table')[-1]
-    row_data = datatable.findAll('tr')
+    data_table = soup.findAll('table')[-1]
+    row_data = data_table.findAll('tr')
 
     header_data = [x.get_text().rstrip() for x in row_data[0].findAll('th')]
     print(f'Header data found: {header_data}')
 
     header_sub_data = [x.get_text().rstrip() for x in row_data[1].findAll('th')]
     print(f'Header sub-data found: {header_sub_data}')
-    '''
-    Example schema of an item that will be scraped from the datatable:
-    {
-        item_name: Rough Blasting Powder,
-        category: Crafting Material
-        materials: {
-            Rough Stone: 1
-        },
-        skill: {
-            orange: 1,
-            yellow: 20,
-            green: 30,
-            gray: 40
-        },
-        source: Trainer
-    }
 
-    We will end up with a list of these dictionaries on a successful scrape
-    '''
     # All scraped items
     items = []
 
@@ -114,7 +95,8 @@ def main(args: dict) -> None:
         # TODO implement some error handling here
         # # Catch errors in the table if the item has been added to the same location as
         # # it's amount
-        # error_list_check_no_hidden_chars = ''.join(char for char in materials_list if char in printable)
+        # error_list_check_no_hidden_chars = \
+        #   ''.join(char for char in materials_list if char in printable)
         # error_list_check_no_hidden_chars = error_list_check_no_hidden_chars.replace(' ', '')
         # print(error_list_check_no_hidden_chars)
 
@@ -133,7 +115,8 @@ def main(args: dict) -> None:
         # print("hidden materials")
         # print(hidden_materials)
 
-        # error_list_check = list(filter(lambda x: 'x' not in x, error_list_check_no_hidden_chars.split(' ')))
+        # error_list_check = \
+        #   list(filter(lambda x: 'x' not in x, error_list_check_no_hidden_chars.split(' ')))
         # print(error_list_check)
 
         # Make an exception for broken dark iron rifle...
@@ -158,8 +141,8 @@ def main(args: dict) -> None:
 
         # Scrape the skill levels
         sub_data_td_start_pos = 3
-        for j in range(len(header_sub_data)):
-            item_data[header_data[3]][header_sub_data[j]] = \
+        for sub_data in header_sub_data:
+            item_data[header_data[3]][sub_data] = \
                 td_data[sub_data_td_start_pos].find('span').get_text()
 
             sub_data_td_start_pos += 1
@@ -167,7 +150,8 @@ def main(args: dict) -> None:
         # We are not worried about scraping source data for this
         items.append(item_data)
 
-    print(items)
+    with open(f'prof_{args.profession}.json', 'w', encoding='utf-8') as file:
+        json.dump(items, file)
 
 
 if __name__ == "__main__":
@@ -175,6 +159,7 @@ if __name__ == "__main__":
 
 
     # TODO use asyncio to capture all professions asynchronously
+
     # Select from list of professions
     AVAILABLE_PROFESSIONS = [
         'alchemy',
@@ -182,6 +167,7 @@ if __name__ == "__main__":
         'enchanting',
         'engineering',
         'tailoring',
+        'leatherworking'
     ]
 
     PARSER = argparse.ArgumentParser(
