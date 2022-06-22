@@ -1,4 +1,5 @@
 import json
+from models import Profession
 
 
 def main(args: dict) -> None:
@@ -6,19 +7,18 @@ def main(args: dict) -> None:
         raise Exception('Must use command "-f" and pass in a '
                         + ' JSON file containing valid profession data.')
 
-    profession_data_list = []
-    with open(args.profession_json_file, 'r', encoding='utf8') as file:
-        profession_data_list = json.load(file)
+    professions = []
+    with open(args.profession_json_file, 'r', encoding='utf-8') as file:
+        professions = Profession.schema().load(json.load(file), many=True)
 
-    print(profession_data_list)
-
+    print(professions)
 
 if __name__ == "__main__":
     import argparse
 
     PARSER = argparse.ArgumentParser(
-        description='Runs a Monte Carlo Simulation on WoW Classic profession data.')
-    
+        description='This script is used to gather market data for profession materials.')
+
     PARSER.add_argument(
         '-f',
         '--file',

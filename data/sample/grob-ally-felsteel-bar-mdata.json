@@ -1,0 +1,861 @@
+{
+    "slug": "grobbulus-alliance",
+    "itemId": 23448,
+    "name": "Felsteel Bar",
+    "uniqueName": "felsteel-bar",
+    "timerange": 7,
+    "data": [
+        {
+            "marketValue": 60453,
+            "minBuyout": 59999,
+            "quantity": 293,
+            "scannedAt": "2022-06-14T00:58:09.000Z"
+        },
+        {
+            "marketValue": 60056,
+            "minBuyout": 59500,
+            "quantity": 290,
+            "scannedAt": "2022-06-14T02:06:58.000Z"
+        },
+        {
+            "marketValue": 59946,
+            "minBuyout": 58500,
+            "quantity": 270,
+            "scannedAt": "2022-06-14T03:07:11.000Z"
+        },
+        {
+            "marketValue": 60227,
+            "minBuyout": 59498,
+            "quantity": 241,
+            "scannedAt": "2022-06-14T04:06:51.000Z"
+        },
+        {
+            "marketValue": 60097,
+            "minBuyout": 58999,
+            "quantity": 251,
+            "scannedAt": "2022-06-14T04:42:29.000Z"
+        },
+        {
+            "marketValue": 65288,
+            "minBuyout": 62000,
+            "quantity": 164,
+            "scannedAt": "2022-06-14T06:47:15.000Z"
+        },
+        {
+            "marketValue": 82499,
+            "minBuyout": 69998,
+            "quantity": 156,
+            "scannedAt": "2022-06-14T08:10:39.000Z"
+        },
+        {
+            "marketValue": 82498,
+            "minBuyout": 82496,
+            "quantity": 137,
+            "scannedAt": "2022-06-14T10:41:52.000Z"
+        },
+        {
+            "marketValue": 82497,
+            "minBuyout": 82493,
+            "quantity": 142,
+            "scannedAt": "2022-06-14T11:34:39.000Z"
+        },
+        {
+            "marketValue": 82493,
+            "minBuyout": 82488,
+            "quantity": 149,
+            "scannedAt": "2022-06-14T13:31:41.000Z"
+        },
+        {
+            "marketValue": 79997,
+            "minBuyout": 79996,
+            "quantity": 290,
+            "scannedAt": "2022-06-14T16:00:32.000Z"
+        },
+        {
+            "marketValue": 79996,
+            "minBuyout": 79994,
+            "quantity": 252,
+            "scannedAt": "2022-06-14T16:53:20.000Z"
+        },
+        {
+            "marketValue": 79994,
+            "minBuyout": 79991,
+            "quantity": 341,
+            "scannedAt": "2022-06-14T17:43:17.000Z"
+        },
+        {
+            "marketValue": 79989,
+            "minBuyout": 79986,
+            "quantity": 392,
+            "scannedAt": "2022-06-14T19:45:59.000Z"
+        },
+        {
+            "marketValue": 79988,
+            "minBuyout": 79500,
+            "quantity": 484,
+            "scannedAt": "2022-06-14T20:23:46.000Z"
+        },
+        {
+            "marketValue": 79988,
+            "minBuyout": 79979,
+            "quantity": 477,
+            "scannedAt": "2022-06-14T21:16:30.000Z"
+        },
+        {
+            "marketValue": 79988,
+            "minBuyout": 79982,
+            "quantity": 472,
+            "scannedAt": "2022-06-14T21:58:11.000Z"
+        },
+        {
+            "marketValue": 79918,
+            "minBuyout": 77499,
+            "quantity": 457,
+            "scannedAt": "2022-06-14T23:27:35.000Z"
+        },
+        {
+            "marketValue": 76562,
+            "minBuyout": 72994,
+            "quantity": 493,
+            "scannedAt": "2022-06-15T01:07:34.000Z"
+        },
+        {
+            "marketValue": 78805,
+            "minBuyout": 73497,
+            "quantity": 460,
+            "scannedAt": "2022-06-15T01:53:47.000Z"
+        },
+        {
+            "marketValue": 79782,
+            "minBuyout": 72000,
+            "quantity": 442,
+            "scannedAt": "2022-06-15T02:33:41.000Z"
+        },
+        {
+            "marketValue": 72939,
+            "minBuyout": 71998,
+            "quantity": 371,
+            "scannedAt": "2022-06-15T03:38:48.000Z"
+        },
+        {
+            "marketValue": 71992,
+            "minBuyout": 69998,
+            "quantity": 463,
+            "scannedAt": "2022-06-15T04:15:03.000Z"
+        },
+        {
+            "marketValue": 71988,
+            "minBuyout": 71987,
+            "quantity": 490,
+            "scannedAt": "2022-06-15T04:59:47.000Z"
+        },
+        {
+            "marketValue": 71987,
+            "minBuyout": 71983,
+            "quantity": 448,
+            "scannedAt": "2022-06-15T06:00:17.000Z"
+        },
+        {
+            "marketValue": 71985,
+            "minBuyout": 71979,
+            "quantity": 445,
+            "scannedAt": "2022-06-15T07:04:15.000Z"
+        },
+        {
+            "marketValue": 71844,
+            "minBuyout": 70500,
+            "quantity": 428,
+            "scannedAt": "2022-06-15T08:58:00.000Z"
+        },
+        {
+            "marketValue": 71840,
+            "minBuyout": 70499,
+            "quantity": 432,
+            "scannedAt": "2022-06-15T09:49:33.000Z"
+        },
+        {
+            "marketValue": 71984,
+            "minBuyout": 71499,
+            "quantity": 331,
+            "scannedAt": "2022-06-15T11:58:31.000Z"
+        },
+        {
+            "marketValue": 71320,
+            "minBuyout": 69400,
+            "quantity": 405,
+            "scannedAt": "2022-06-15T14:05:58.000Z"
+        },
+        {
+            "marketValue": 70245,
+            "minBuyout": 69395,
+            "quantity": 423,
+            "scannedAt": "2022-06-15T15:48:32.000Z"
+        },
+        {
+            "marketValue": 69825,
+            "minBuyout": 69393,
+            "quantity": 384,
+            "scannedAt": "2022-06-15T16:40:04.000Z"
+        },
+        {
+            "marketValue": 69392,
+            "minBuyout": 69392,
+            "quantity": 530,
+            "scannedAt": "2022-06-15T17:26:39.000Z"
+        },
+        {
+            "marketValue": 69391,
+            "minBuyout": 69000,
+            "quantity": 551,
+            "scannedAt": "2022-06-15T18:21:03.000Z"
+        },
+        {
+            "marketValue": 69286,
+            "minBuyout": 68499,
+            "quantity": 591,
+            "scannedAt": "2022-06-15T19:35:22.000Z"
+        },
+        {
+            "marketValue": 69191,
+            "minBuyout": 59000,
+            "quantity": 554,
+            "scannedAt": "2022-06-15T21:33:26.000Z"
+        },
+        {
+            "marketValue": 69032,
+            "minBuyout": 67000,
+            "quantity": 640,
+            "scannedAt": "2022-06-15T23:19:03.000Z"
+        },
+        {
+            "marketValue": 69043,
+            "minBuyout": 66499,
+            "quantity": 612,
+            "scannedAt": "2022-06-16T00:04:00.000Z"
+        },
+        {
+            "marketValue": 69264,
+            "minBuyout": 65500,
+            "quantity": 498,
+            "scannedAt": "2022-06-16T00:59:04.000Z"
+        },
+        {
+            "marketValue": 69388,
+            "minBuyout": 68986,
+            "quantity": 446,
+            "scannedAt": "2022-06-16T02:25:27.000Z"
+        },
+        {
+            "marketValue": 69120,
+            "minBuyout": 68500,
+            "quantity": 377,
+            "scannedAt": "2022-06-16T03:24:47.000Z"
+        },
+        {
+            "marketValue": 68987,
+            "minBuyout": 65000,
+            "quantity": 334,
+            "scannedAt": "2022-06-16T04:16:15.000Z"
+        },
+        {
+            "marketValue": 68985,
+            "minBuyout": 68499,
+            "quantity": 184,
+            "scannedAt": "2022-06-16T05:29:34.000Z"
+        },
+        {
+            "marketValue": 68984,
+            "minBuyout": 68497,
+            "quantity": 163,
+            "scannedAt": "2022-06-16T06:12:15.000Z"
+        },
+        {
+            "marketValue": 68795,
+            "minBuyout": 68494,
+            "quantity": 149,
+            "scannedAt": "2022-06-16T07:22:28.000Z"
+        },
+        {
+            "marketValue": 69212,
+            "minBuyout": 68497,
+            "quantity": 174,
+            "scannedAt": "2022-06-16T08:21:00.000Z"
+        },
+        {
+            "marketValue": 68494,
+            "minBuyout": 67998,
+            "quantity": 379,
+            "scannedAt": "2022-06-16T10:44:02.000Z"
+        },
+        {
+            "marketValue": 68377,
+            "minBuyout": 60000,
+            "quantity": 374,
+            "scannedAt": "2022-06-16T11:25:17.000Z"
+        },
+        {
+            "marketValue": 68377,
+            "minBuyout": 60000,
+            "quantity": 374,
+            "scannedAt": "2022-06-16T12:09:39.000Z"
+        },
+        {
+            "marketValue": 68317,
+            "minBuyout": 67499,
+            "quantity": 337,
+            "scannedAt": "2022-06-16T14:41:15.000Z"
+        },
+        {
+            "marketValue": 68190,
+            "minBuyout": 66500,
+            "quantity": 352,
+            "scannedAt": "2022-06-16T15:50:58.000Z"
+        },
+        {
+            "marketValue": 67372,
+            "minBuyout": 66998,
+            "quantity": 323,
+            "scannedAt": "2022-06-16T16:49:18.000Z"
+        },
+        {
+            "marketValue": 67132,
+            "minBuyout": 66997,
+            "quantity": 359,
+            "scannedAt": "2022-06-16T17:24:22.000Z"
+        },
+        {
+            "marketValue": 67132,
+            "minBuyout": 66498,
+            "quantity": 369,
+            "scannedAt": "2022-06-16T17:59:22.000Z"
+        },
+        {
+            "marketValue": 66382,
+            "minBuyout": 65499,
+            "quantity": 338,
+            "scannedAt": "2022-06-16T18:54:18.000Z"
+        },
+        {
+            "marketValue": 65846,
+            "minBuyout": 65498,
+            "quantity": 369,
+            "scannedAt": "2022-06-16T19:59:36.000Z"
+        },
+        {
+            "marketValue": 65997,
+            "minBuyout": 65495,
+            "quantity": 324,
+            "scannedAt": "2022-06-16T20:53:11.000Z"
+        },
+        {
+            "marketValue": 65729,
+            "minBuyout": 65399,
+            "quantity": 356,
+            "scannedAt": "2022-06-16T22:14:31.000Z"
+        },
+        {
+            "marketValue": 65997,
+            "minBuyout": 65000,
+            "quantity": 312,
+            "scannedAt": "2022-06-16T22:58:17.000Z"
+        },
+        {
+            "marketValue": 65997,
+            "minBuyout": 65496,
+            "quantity": 291,
+            "scannedAt": "2022-06-16T23:45:06.000Z"
+        },
+        {
+            "marketValue": 66414,
+            "minBuyout": 65500,
+            "quantity": 210,
+            "scannedAt": "2022-06-17T00:29:09.000Z"
+        },
+        {
+            "marketValue": 66126,
+            "minBuyout": 65500,
+            "quantity": 206,
+            "scannedAt": "2022-06-17T01:14:20.000Z"
+        },
+        {
+            "marketValue": 66434,
+            "minBuyout": 65996,
+            "quantity": 186,
+            "scannedAt": "2022-06-17T02:05:26.000Z"
+        },
+        {
+            "marketValue": 66062,
+            "minBuyout": 65997,
+            "quantity": 188,
+            "scannedAt": "2022-06-17T02:52:11.000Z"
+        },
+        {
+            "marketValue": 65996,
+            "minBuyout": 65995,
+            "quantity": 219,
+            "scannedAt": "2022-06-17T03:30:50.000Z"
+        },
+        {
+            "marketValue": 65985,
+            "minBuyout": 65980,
+            "quantity": 227,
+            "scannedAt": "2022-06-17T05:34:40.000Z"
+        },
+        {
+            "marketValue": 65985,
+            "minBuyout": 65981,
+            "quantity": 316,
+            "scannedAt": "2022-06-17T07:44:05.000Z"
+        },
+        {
+            "marketValue": 65985,
+            "minBuyout": 65982,
+            "quantity": 310,
+            "scannedAt": "2022-06-17T08:29:57.000Z"
+        },
+        {
+            "marketValue": 65985,
+            "minBuyout": 65982,
+            "quantity": 246,
+            "scannedAt": "2022-06-17T09:07:36.000Z"
+        },
+        {
+            "marketValue": 65985,
+            "minBuyout": 65982,
+            "quantity": 246,
+            "scannedAt": "2022-06-17T09:51:24.000Z"
+        },
+        {
+            "marketValue": 65985,
+            "minBuyout": 65982,
+            "quantity": 246,
+            "scannedAt": "2022-06-17T10:31:29.000Z"
+        },
+        {
+            "marketValue": 65761,
+            "minBuyout": 65000,
+            "quantity": 250,
+            "scannedAt": "2022-06-17T11:53:57.000Z"
+        },
+        {
+            "marketValue": 64997,
+            "minBuyout": 64995,
+            "quantity": 279,
+            "scannedAt": "2022-06-17T13:20:41.000Z"
+        },
+        {
+            "marketValue": 64717,
+            "minBuyout": 64300,
+            "quantity": 339,
+            "scannedAt": "2022-06-17T14:22:32.000Z"
+        },
+        {
+            "marketValue": 62994,
+            "minBuyout": 61549,
+            "quantity": 385,
+            "scannedAt": "2022-06-17T16:29:51.000Z"
+        },
+        {
+            "marketValue": 61475,
+            "minBuyout": 60998,
+            "quantity": 446,
+            "scannedAt": "2022-06-17T17:06:24.000Z"
+        },
+        {
+            "marketValue": 61311,
+            "minBuyout": 60993,
+            "quantity": 460,
+            "scannedAt": "2022-06-17T17:47:50.000Z"
+        },
+        {
+            "marketValue": 60996,
+            "minBuyout": 60497,
+            "quantity": 364,
+            "scannedAt": "2022-06-17T18:28:49.000Z"
+        },
+        {
+            "marketValue": 60834,
+            "minBuyout": 60493,
+            "quantity": 341,
+            "scannedAt": "2022-06-17T19:25:01.000Z"
+        },
+        {
+            "marketValue": 60646,
+            "minBuyout": 60479,
+            "quantity": 300,
+            "scannedAt": "2022-06-17T20:20:12.000Z"
+        },
+        {
+            "marketValue": 60665,
+            "minBuyout": 59999,
+            "quantity": 298,
+            "scannedAt": "2022-06-17T21:00:21.000Z"
+        },
+        {
+            "marketValue": 60223,
+            "minBuyout": 59994,
+            "quantity": 299,
+            "scannedAt": "2022-06-17T21:52:51.000Z"
+        },
+        {
+            "marketValue": 60529,
+            "minBuyout": 54500,
+            "quantity": 295,
+            "scannedAt": "2022-06-17T23:03:24.000Z"
+        },
+        {
+            "marketValue": 57991,
+            "minBuyout": 54494,
+            "quantity": 322,
+            "scannedAt": "2022-06-17T23:55:42.000Z"
+        },
+        {
+            "marketValue": 54479,
+            "minBuyout": 53999,
+            "quantity": 345,
+            "scannedAt": "2022-06-18T00:44:04.000Z"
+        },
+        {
+            "marketValue": 54550,
+            "minBuyout": 54492,
+            "quantity": 296,
+            "scannedAt": "2022-06-18T02:21:01.000Z"
+        },
+        {
+            "marketValue": 52499,
+            "minBuyout": 52499,
+            "quantity": 379,
+            "scannedAt": "2022-06-18T03:39:01.000Z"
+        },
+        {
+            "marketValue": 52499,
+            "minBuyout": 52496,
+            "quantity": 382,
+            "scannedAt": "2022-06-18T04:16:43.000Z"
+        },
+        {
+            "marketValue": 59994,
+            "minBuyout": 59979,
+            "quantity": 178,
+            "scannedAt": "2022-06-18T05:24:46.000Z"
+        },
+        {
+            "marketValue": 64086,
+            "minBuyout": 59989,
+            "quantity": 157,
+            "scannedAt": "2022-06-18T06:00:20.000Z"
+        },
+        {
+            "marketValue": 93268,
+            "minBuyout": 59988,
+            "quantity": 232,
+            "scannedAt": "2022-06-18T06:38:07.000Z"
+        },
+        {
+            "marketValue": 92999,
+            "minBuyout": 92998,
+            "quantity": 459,
+            "scannedAt": "2022-06-18T07:18:35.000Z"
+        },
+        {
+            "marketValue": 92973,
+            "minBuyout": 87498,
+            "quantity": 493,
+            "scannedAt": "2022-06-18T09:00:46.000Z"
+        },
+        {
+            "marketValue": 92019,
+            "minBuyout": 79999,
+            "quantity": 530,
+            "scannedAt": "2022-06-18T11:07:00.000Z"
+        },
+        {
+            "marketValue": 87901,
+            "minBuyout": 78989,
+            "quantity": 545,
+            "scannedAt": "2022-06-18T11:48:56.000Z"
+        },
+        {
+            "marketValue": 92997,
+            "minBuyout": 92929,
+            "quantity": 530,
+            "scannedAt": "2022-06-18T13:20:24.000Z"
+        },
+        {
+            "marketValue": 92996,
+            "minBuyout": 92928,
+            "quantity": 607,
+            "scannedAt": "2022-06-18T14:05:39.000Z"
+        },
+        {
+            "marketValue": 92989,
+            "minBuyout": 89498,
+            "quantity": 652,
+            "scannedAt": "2022-06-18T14:55:10.000Z"
+        },
+        {
+            "marketValue": 92990,
+            "minBuyout": 89998,
+            "quantity": 599,
+            "scannedAt": "2022-06-18T15:38:18.000Z"
+        },
+        {
+            "marketValue": 92996,
+            "minBuyout": 92928,
+            "quantity": 593,
+            "scannedAt": "2022-06-18T17:07:38.000Z"
+        },
+        {
+            "marketValue": 92925,
+            "minBuyout": 92924,
+            "quantity": 576,
+            "scannedAt": "2022-06-18T17:49:34.000Z"
+        },
+        {
+            "marketValue": 92919,
+            "minBuyout": 92915,
+            "quantity": 468,
+            "scannedAt": "2022-06-18T19:13:44.000Z"
+        },
+        {
+            "marketValue": 92909,
+            "minBuyout": 92500,
+            "quantity": 712,
+            "scannedAt": "2022-06-18T20:46:35.000Z"
+        },
+        {
+            "marketValue": 92256,
+            "minBuyout": 91499,
+            "quantity": 717,
+            "scannedAt": "2022-06-18T21:27:36.000Z"
+        },
+        {
+            "marketValue": 92091,
+            "minBuyout": 72750,
+            "quantity": 738,
+            "scannedAt": "2022-06-18T23:02:59.000Z"
+        },
+        {
+            "marketValue": 92150,
+            "minBuyout": 72747,
+            "quantity": 683,
+            "scannedAt": "2022-06-19T00:18:28.000Z"
+        },
+        {
+            "marketValue": 92636,
+            "minBuyout": 77665,
+            "quantity": 554,
+            "scannedAt": "2022-06-19T01:09:08.000Z"
+        },
+        {
+            "marketValue": 92426,
+            "minBuyout": 77663,
+            "quantity": 487,
+            "scannedAt": "2022-06-19T02:03:16.000Z"
+        },
+        {
+            "marketValue": 92374,
+            "minBuyout": 75720,
+            "quantity": 505,
+            "scannedAt": "2022-06-19T02:39:44.000Z"
+        },
+        {
+            "marketValue": 89493,
+            "minBuyout": 70000,
+            "quantity": 508,
+            "scannedAt": "2022-06-19T03:28:31.000Z"
+        },
+        {
+            "marketValue": 90767,
+            "minBuyout": 89995,
+            "quantity": 609,
+            "scannedAt": "2022-06-19T05:35:42.000Z"
+        },
+        {
+            "marketValue": 89995,
+            "minBuyout": 89994,
+            "quantity": 484,
+            "scannedAt": "2022-06-19T07:50:38.000Z"
+        },
+        {
+            "marketValue": 89807,
+            "minBuyout": 89497,
+            "quantity": 461,
+            "scannedAt": "2022-06-19T09:50:42.000Z"
+        },
+        {
+            "marketValue": 89496,
+            "minBuyout": 88997,
+            "quantity": 531,
+            "scannedAt": "2022-06-19T12:22:20.000Z"
+        },
+        {
+            "marketValue": 89495,
+            "minBuyout": 88997,
+            "quantity": 541,
+            "scannedAt": "2022-06-19T13:07:35.000Z"
+        },
+        {
+            "marketValue": 89071,
+            "minBuyout": 88495,
+            "quantity": 626,
+            "scannedAt": "2022-06-19T13:49:05.000Z"
+        },
+        {
+            "marketValue": 88621,
+            "minBuyout": 84499,
+            "quantity": 685,
+            "scannedAt": "2022-06-19T15:53:58.000Z"
+        },
+        {
+            "marketValue": 88759,
+            "minBuyout": 84495,
+            "quantity": 658,
+            "scannedAt": "2022-06-19T16:43:44.000Z"
+        },
+        {
+            "marketValue": 84595,
+            "minBuyout": 84487,
+            "quantity": 548,
+            "scannedAt": "2022-06-19T17:21:15.000Z"
+        },
+        {
+            "marketValue": 84480,
+            "minBuyout": 84000,
+            "quantity": 516,
+            "scannedAt": "2022-06-19T19:03:03.000Z"
+        },
+        {
+            "marketValue": 84407,
+            "minBuyout": 83499,
+            "quantity": 577,
+            "scannedAt": "2022-06-19T19:41:44.000Z"
+        },
+        {
+            "marketValue": 83983,
+            "minBuyout": 79999,
+            "quantity": 581,
+            "scannedAt": "2022-06-19T20:38:24.000Z"
+        },
+        {
+            "marketValue": 81977,
+            "minBuyout": 79499,
+            "quantity": 616,
+            "scannedAt": "2022-06-19T21:20:19.000Z"
+        },
+        {
+            "marketValue": 82438,
+            "minBuyout": 79495,
+            "quantity": 595,
+            "scannedAt": "2022-06-19T21:55:57.000Z"
+        },
+        {
+            "marketValue": 80549,
+            "minBuyout": 79487,
+            "quantity": 664,
+            "scannedAt": "2022-06-19T22:59:59.000Z"
+        },
+        {
+            "marketValue": 82274,
+            "minBuyout": 79000,
+            "quantity": 584,
+            "scannedAt": "2022-06-20T00:08:11.000Z"
+        },
+        {
+            "marketValue": 81732,
+            "minBuyout": 79899,
+            "quantity": 530,
+            "scannedAt": "2022-06-20T01:12:48.000Z"
+        },
+        {
+            "marketValue": 80184,
+            "minBuyout": 79497,
+            "quantity": 479,
+            "scannedAt": "2022-06-20T02:11:46.000Z"
+        },
+        {
+            "marketValue": 77480,
+            "minBuyout": 74894,
+            "quantity": 407,
+            "scannedAt": "2022-06-20T04:20:02.000Z"
+        },
+        {
+            "marketValue": 78779,
+            "minBuyout": 75000,
+            "quantity": 333,
+            "scannedAt": "2022-06-20T05:15:21.000Z"
+        },
+        {
+            "marketValue": 75728,
+            "minBuyout": 73900,
+            "quantity": 365,
+            "scannedAt": "2022-06-20T06:10:01.000Z"
+        },
+        {
+            "marketValue": 74343,
+            "minBuyout": 73400,
+            "quantity": 267,
+            "scannedAt": "2022-06-20T07:11:57.000Z"
+        },
+        {
+            "marketValue": 74119,
+            "minBuyout": 73399,
+            "quantity": 278,
+            "scannedAt": "2022-06-20T07:51:03.000Z"
+        },
+        {
+            "marketValue": 73397,
+            "minBuyout": 73300,
+            "quantity": 353,
+            "scannedAt": "2022-06-20T10:12:23.000Z"
+        },
+        {
+            "marketValue": 73397,
+            "minBuyout": 73296,
+            "quantity": 391,
+            "scannedAt": "2022-06-20T10:47:24.000Z"
+        },
+        {
+            "marketValue": 73350,
+            "minBuyout": 73196,
+            "quantity": 426,
+            "scannedAt": "2022-06-20T12:14:30.000Z"
+        },
+        {
+            "marketValue": 73242,
+            "minBuyout": 72500,
+            "quantity": 499,
+            "scannedAt": "2022-06-20T12:49:32.000Z"
+        },
+        {
+            "marketValue": 73158,
+            "minBuyout": 71500,
+            "quantity": 470,
+            "scannedAt": "2022-06-20T13:43:59.000Z"
+        },
+        {
+            "marketValue": 72903,
+            "minBuyout": 70000,
+            "quantity": 446,
+            "scannedAt": "2022-06-20T14:59:39.000Z"
+        },
+        {
+            "marketValue": 72053,
+            "minBuyout": 69995,
+            "quantity": 474,
+            "scannedAt": "2022-06-20T15:57:27.000Z"
+        },
+        {
+            "marketValue": 72041,
+            "minBuyout": 69995,
+            "quantity": 451,
+            "scannedAt": "2022-06-20T16:39:17.000Z"
+        },
+        {
+            "marketValue": 71680,
+            "minBuyout": 69990,
+            "quantity": 439,
+            "scannedAt": "2022-06-20T18:03:23.000Z"
+        }
+    ]
+}

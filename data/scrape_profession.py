@@ -150,7 +150,7 @@ def main(args: dict) -> None:
         # We are not worried about scraping source data for this
         items.append(item_data)
 
-    with open(f'prof_{args.profession}.json', 'w', encoding='utf-8') as file:
+    with open(f'prof-{args.profession}.json', 'w', encoding='utf-8') as file:
         json.dump(items, file)
 
 
