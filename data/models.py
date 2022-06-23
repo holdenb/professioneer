@@ -15,7 +15,7 @@ class Profession:
 class MarketData:
     market_value: int = field(metadata=config(field_name="marketValue"))
     min_buyout: int = field(metadata=config(field_name="minBuyout"))
-    quantity: int = field(metadata=config(field_name="quantity"))
+    quantity: int
     scanned_at: str = field(metadata=config(field_name="scannedAt"))
 
 @dataclass_json
@@ -26,4 +26,4 @@ class MarketItem:
     name: str
     unique_name: str = field(metadata=config(field_name="uniqueName"))
     time_range: int = field(metadata=config(field_name="timerange"))
-    market_data: list[MarketData] = field(metadata=config(field_name="data"))
+    data: list[MarketData]
