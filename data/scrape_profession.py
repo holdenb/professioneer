@@ -6,15 +6,6 @@ from bs4 import BeautifulSoup
 
 
 def main(args: dict) -> None:
-    """[summary]
-    Arguments:
-        args {dict} -- [description]
-    Raises:
-        Exception: [description]
-    """
-    if args.profession is None:
-        raise Exception('Must use command "-p" and a profession name.')
-
     url = f'https://wow.gamepedia.com/Classic_{args.profession}_schematics'
 
     try:
@@ -92,7 +83,7 @@ def main(args: dict) -> None:
             removal_str = '[' + group + ']'
             materials_list = materials_list.replace(removal_str, '')
 
-        # TODO implement some error handling here
+        # TODO implement error handling
         # # Catch errors in the table if the item has been added to the same location as
         # # it's amount
         # error_list_check_no_hidden_chars = \
@@ -157,10 +148,6 @@ def main(args: dict) -> None:
 if __name__ == "__main__":
     import argparse
 
-
-    # TODO use asyncio to capture all professions asynchronously
-
-    # Select from list of professions
     AVAILABLE_PROFESSIONS = [
         'alchemy',
         'blacksmithing',
@@ -172,6 +159,12 @@ if __name__ == "__main__":
 
     PARSER = argparse.ArgumentParser(
         description='This script is used to scrape WowHead to build profession databases.')
-    PARSER.add_argument('-p', '--profession', choices=AVAILABLE_PROFESSIONS)
+    
+    PARSER.add_argument(
+        '-p',
+        '--profession',
+        choices=AVAILABLE_PROFESSIONS,
+        required=True
+    )
 
     main(PARSER.parse_args())

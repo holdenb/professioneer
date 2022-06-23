@@ -2,7 +2,7 @@ import json
 from functools import reduce
 import asyncio
 import aiohttp
-from models import Profession, MarketItem, MarketData
+from datamodels import CraftingPattern, MarketItem, MarketData
 from ratelimiter import RateLimiter
 
 
@@ -22,18 +22,14 @@ async def request_price_data(url: str, session: aiohttp.ClientSession) -> dict:
 
 
 async def main(args: dict) -> None:
-    if args.profession_json_file is None:
-        raise Exception('Must use command "-f" and pass in a '
-                        + ' JSON file containing valid profession data.')
-
-    professions = [Profession]
+    crafting_patterns = [CraftingPattern]
     with open(args.profession_json_file, 'r', encoding='utf-8') as file:
-        professions = Profession.schema().load(json.load(file), many=True)
+        crafting_patterns = CraftingPattern.schema().load(json.load(file), many=True)
 
     total_unique_materials = list(
         reduce(
             lambda a, b: a | b,
-            map(lambda prof: set(list(prof.materials.keys())), professions)
+            map(lambda prof: set(list(prof.materials.keys())), crafting_patterns)
             )
         )
 

@@ -1,16 +1,24 @@
 import json
+from data.datamodels import CraftingPattern, MarketData
+
+
+class Simulation:
+    def __init__(self, patterns: list, market: dict):
+        self.patterns = patterns
+        self.market = market
 
 
 def main(args: dict) -> None:
-    if args.profession_json_file is None:
-        raise Exception('Must use command "-f" and pass in a '
-                        + ' JSON file containing valid profession data.')
+    crafting_patterns = [CraftingPattern]
+    with open(args.profession_json_file, 'r', encoding='utf-8') as file:
+        crafting_patterns = CraftingPattern.schema().load(json.load(file), many=True)
 
-    profession_data_list = []
-    with open(args.profession_json_file, 'r', encoding='utf8') as file:
-        profession_data_list = json.load(file)
+    market_data = {}
+    with open(args.market_data_file, 'r', encoding='utf-8') as file:
+        market_data = json.load(file)
+        market_data = {k: MarketData.schema().load(v) for k, v in market_data.items()}
 
-    print(profession_data_list)
+    sim = Simulation(crafting_patterns, market_data)
 
 
 if __name__ == "__main__":
@@ -18,12 +26,20 @@ if __name__ == "__main__":
 
     PARSER = argparse.ArgumentParser(
         description='Runs a Monte Carlo Simulation on WoW Classic profession data.')
-    
+
     PARSER.add_argument(
-        '-f',
-        '--file',
+        '-p',
+        '--profession',
         dest='profession_json_file',
-        help='JSON file containing profession data'
+        help='JSON file containing profession data',
+        required=True
+    )
+    PARSER.add_argument(
+        '-m',
+        '--market',
+        dest='market_data_file',
+        help='JSON file containing market data related to a profession',
+        required=True
     )
 
     main(PARSER.parse_args())

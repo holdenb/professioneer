@@ -4,7 +4,7 @@ from dataclasses_json import config, dataclass_json
 
 @dataclass_json
 @dataclass(frozen=True)
-class Profession:
+class CraftingPattern:
     item: str = field(metadata=config(field_name="Item"))
     category: str = field(metadata=config(field_name="Category"))
     materials: dict[str, int] = field(metadata=config(field_name="Materials"))
