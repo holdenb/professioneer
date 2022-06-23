@@ -1,0 +1,650 @@
+{
+    "Living Essence": {
+        "minBuyout": 1252,
+        "quantity": 129,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 1254
+    },
+    "Tigerseye": {
+        "minBuyout": 1524,
+        "quantity": 129,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 2007
+    },
+    "Medium Leather": {
+        "minBuyout": 474,
+        "quantity": 807,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 478
+    },
+    "Moss Agate": {
+        "minBuyout": 51000,
+        "quantity": 226,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 58249
+    },
+    "Mithril Tube": {
+        "minBuyout": 2096,
+        "quantity": 81,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 2097
+    },
+    "Deadly Scope": {
+        "minBuyout": 129997,
+        "quantity": 19,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 129997
+    },
+    "Delicate Arcanite Converter": {
+        "minBuyout": 396496,
+        "quantity": 46,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 396774
+    },
+    "Powerful Mojo": {
+        "minBuyout": 12900,
+        "quantity": 127,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 20786
+    },
+    "Goblin Rocket Fuel": {
+        "minBuyout": 17994,
+        "quantity": 83,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 17995
+    },
+    "Heavy Stone": {
+        "minBuyout": 3500,
+        "quantity": 1111,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 4294
+    },
+    "Standard Scope": {
+        "minBuyout": 8600,
+        "quantity": 55,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 8633
+    },
+    "Dark Iron Bar": {
+        "minBuyout": 37400,
+        "quantity": 77,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 37400
+    },
+    "Mithril Casing": {
+        "minBuyout": 12548,
+        "quantity": 127,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 13274
+    },
+    "Essence of Water": {
+        "minBuyout": 11700,
+        "quantity": 86,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 18548
+    },
+    "Rough Stone": {
+        "minBuyout": 15,
+        "quantity": 1065,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 18
+    },
+    "Large Opal": {
+        "minBuyout": 83500,
+        "quantity": 45,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 84583
+    },
+    "Souldarite": {
+        "minBuyout": 20399,
+        "quantity": 5,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 20399
+    },
+    "Elemental Earth": {
+        "minBuyout": 7397,
+        "quantity": 82,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 7398
+    },
+    "Mithril Mechanical Dragonling": {
+        "minBuyout": 300000,
+        "quantity": 1,
+        "scannedAt": "2022-06-22T19:22:11.000Z",
+        "marketValue": 300000
+    },
+    "Blue Sapphire": {
+        "minBuyout": 17399,
+        "quantity": 140,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 19960
+    },
+    "Solid Blasting Powder": {
+        "minBuyout": 5997,
+        "quantity": 227,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 6834
+    },
+    "Gold Bar": {
+        "minBuyout": 2896,
+        "quantity": 346,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 2928
+    },
+    "Enchanted Leather": {
+        "minBuyout": 78500,
+        "quantity": 85,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 79969
+    },
+    "Azerothian Diamond": {
+        "minBuyout": 119500,
+        "quantity": 88,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 138975
+    },
+    "Bloodvine": {
+        "minBuyout": 39991,
+        "quantity": 50,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 39991
+    },
+    "Shadowgem": {
+        "minBuyout": 12500,
+        "quantity": 234,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 15048
+    },
+    "Thorium Bar": {
+        "minBuyout": 9746,
+        "quantity": 3187,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 10182
+    },
+    "Thorium Tube": {
+        "minBuyout": 7499,
+        "quantity": 24,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 8249
+    },
+    "Dense Stone": {
+        "minBuyout": 389,
+        "quantity": 1991,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 441
+    },
+    "Essence of Earth": {
+        "minBuyout": 29978,
+        "quantity": 118,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 34705
+    },
+    "Solid Stone": {
+        "minBuyout": 1538,
+        "quantity": 4667,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 1805
+    },
+    "Small Flame Sac": {
+        "minBuyout": 998,
+        "quantity": 51,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 998
+    },
+    "Arcanite Bar": {
+        "minBuyout": 119899,
+        "quantity": 158,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 119900
+    },
+    "Copper Bar": {
+        "minBuyout": 999,
+        "quantity": 2100,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 1301
+    },
+    "Aquamarine": {
+        "minBuyout": 9797,
+        "quantity": 237,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 10026
+    },
+    "Gyrochronatom": {
+        "minBuyout": 7396,
+        "quantity": 99,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 7396
+    },
+    "Linen Cloth": {
+        "minBuyout": 122,
+        "quantity": 1693,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 381
+    },
+    "Bronze Bar": {
+        "minBuyout": 5079,
+        "quantity": 2884,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 8375
+    },
+    "Iron Bar": {
+        "minBuyout": 2999,
+        "quantity": 1663,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 3295
+    },
+    "Elemental Fire": {
+        "minBuyout": 1195,
+        "quantity": 121,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 1451
+    },
+    "Star Ruby": {
+        "minBuyout": 7399,
+        "quantity": 212,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 7756
+    },
+    "Core of Earth": {
+        "minBuyout": 3150,
+        "quantity": 59,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 3246
+    },
+    "Steel Bar": {
+        "minBuyout": 6000,
+        "quantity": 1098,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 6797
+    },
+    "Fused Wiring": {
+        "minBuyout": 9999,
+        "quantity": 9,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 9999
+    },
+    "Heavy Blasting Powder": {
+        "minBuyout": 7195,
+        "quantity": 119,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 7195
+    },
+    "Unstable Trigger": {
+        "minBuyout": 31000,
+        "quantity": 80,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 31198
+    },
+    "Nightcrawlers": {
+        "minBuyout": 81,
+        "quantity": 27,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 81
+    },
+    "Gold Power Core": {
+        "minBuyout": 583,
+        "quantity": 52,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 583
+    },
+    "Mageweave Cloth": {
+        "minBuyout": 2099,
+        "quantity": 6668,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 3450
+    },
+    "Icecap": {
+        "minBuyout": 7340,
+        "quantity": 399,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 7596
+    },
+    "Coarse Blasting Powder": {
+        "minBuyout": 174,
+        "quantity": 46,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 457
+    },
+    "Delicate Copper Wire": {
+        "minBuyout": 3199,
+        "quantity": 231,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 3199
+    },
+    "Essence of Undeath": {
+        "minBuyout": 1992,
+        "quantity": 152,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 1997
+    },
+    "Flask of Oil": {
+        "minBuyout": 26,
+        "quantity": 58,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 26
+    },
+    "Jade": {
+        "minBuyout": 17500,
+        "quantity": 137,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 18322
+    },
+    "Silk Cloth": {
+        "minBuyout": 207,
+        "quantity": 6953,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 303
+    },
+    "Light Leather": {
+        "minBuyout": 145,
+        "quantity": 954,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 161
+    },
+    "Heart of the Wild": {
+        "minBuyout": 1860,
+        "quantity": 185,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 1884
+    },
+    "Coarse Stone": {
+        "minBuyout": 58,
+        "quantity": 1024,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 356
+    },
+    "Spellpower Goggles Xtreme": {
+        "minBuyout": 19999,
+        "quantity": 23,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 19999
+    },
+    "Truesilver Transformer": {
+        "minBuyout": 219692,
+        "quantity": 21,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 219693
+    },
+    "Cured Rugged Hide": {
+        "minBuyout": 71999,
+        "quantity": 51,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 72000
+    },
+    "Heart of Fire": {
+        "minBuyout": 19400,
+        "quantity": 40,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 19762
+    },
+    "Handful of Copper Bolts": {
+        "minBuyout": 197,
+        "quantity": 48,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 288
+    },
+    "Heavy Leather": {
+        "minBuyout": 884,
+        "quantity": 743,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 891
+    },
+    "Shadow Silk": {
+        "minBuyout": 1435,
+        "quantity": 217,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 1545
+    },
+    "Silver Contact": {
+        "minBuyout": 123,
+        "quantity": 388,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 124
+    },
+    "Snowball": {
+        "minBuyout": 1690,
+        "quantity": 1391,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 1976
+    },
+    "Heavy Stock": {
+        "minBuyout": 49499,
+        "quantity": 5,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 49499
+    },
+    "Mithril Bar": {
+        "minBuyout": 10996,
+        "quantity": 2410,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 11180
+    },
+    "Essence of Fire": {
+        "minBuyout": 32200,
+        "quantity": 194,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 32780
+    },
+    "Bronze Tube": {
+        "minBuyout": 442,
+        "quantity": 94,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 442
+    },
+    "Rough Blasting Powder": {
+        "minBuyout": 549,
+        "quantity": 71,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 550
+    },
+    "Deeprock Salt": {
+        "minBuyout": 265,
+        "quantity": 36,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 266
+    },
+    "Lesser Moonstone": {
+        "minBuyout": 8500,
+        "quantity": 188,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 19043
+    },
+    "Malachite": {
+        "minBuyout": 1088,
+        "quantity": 155,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 2377
+    },
+    "Silver Bar": {
+        "minBuyout": 9398,
+        "quantity": 694,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 13149
+    },
+    "Flying Tiger Goggles": {
+        "minBuyout": 9900,
+        "quantity": 13,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 9900
+    },
+    "Runecloth": {
+        "minBuyout": 510,
+        "quantity": 8971,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 535
+    },
+    "Big Iron Bomb": {
+        "minBuyout": 36000,
+        "quantity": 154,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 43827
+    },
+    "Fiery Core": {
+        "minBuyout": 215555,
+        "quantity": 3,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 215555
+    },
+    "Truesilver Bar": {
+        "minBuyout": 4893,
+        "quantity": 398,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 4938
+    },
+    "Wool Cloth": {
+        "minBuyout": 248,
+        "quantity": 1025,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 606
+    },
+    "Dense Blasting Powder": {
+        "minBuyout": 2993,
+        "quantity": 339,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 3381
+    },
+    "Bronze Framework": {
+        "minBuyout": 9800,
+        "quantity": 73,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 9891
+    },
+    "Whirring Bronze Gizmo": {
+        "minBuyout": 795,
+        "quantity": 45,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 902
+    },
+    "Wooden Stock": {
+        "minBuyout": 1631,
+        "quantity": 3,
+        "scannedAt": "2022-06-23T05:57:22.000Z",
+        "marketValue": 1631
+    },
+    "Frost Oil": {
+        "minBuyout": 65000,
+        "quantity": 26,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 69214
+    },
+    "Catseye Elixir": {
+        "minBuyout": 2497,
+        "quantity": 24,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 2497
+    },
+    "Rugged Leather": {
+        "minBuyout": 3590,
+        "quantity": 1970,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 3609
+    },
+    "Essence of Air": {
+        "minBuyout": 14789,
+        "quantity": 272,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 18230
+    },
+    "Elemental Air": {
+        "minBuyout": 68000,
+        "quantity": 65,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 69003
+    },
+    "Huge Emerald": {
+        "minBuyout": 54500,
+        "quantity": 96,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 67483
+    },
+    "Thorium Widget": {
+        "minBuyout": 2800,
+        "quantity": 149,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 2948
+    },
+    "Inlaid Mithril Cylinder": {
+        "minBuyout": 189486,
+        "quantity": 19,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 189487
+    },
+    "Refreshing Spring Water": {
+        "minBuyout": 435,
+        "quantity": 58,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 438
+    },
+    "Thick Leather": {
+        "minBuyout": 1785,
+        "quantity": 848,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 1788
+    },
+    "Green Tinted Goggles": {
+        "minBuyout": null,
+        "quantity": null,
+        "scannedAt": null,
+        "marketValue": null
+    },
+    "Fire Goggles": {
+        "minBuyout": null,
+        "quantity": null,
+        "scannedAt": null,
+        "marketValue": null
+    },
+    "Citrine": {
+        "minBuyout": 2539,
+        "quantity": 291,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 7265
+    },
+    "Copper Modulator": {
+        "minBuyout": 396,
+        "quantity": 24,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 396
+    },
+    "Blue Pearl": {
+        "minBuyout": 3398,
+        "quantity": 127,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 3398
+    },
+    "Globe of Water": {
+        "minBuyout": 2200,
+        "quantity": 47,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 2289
+    },
+    "Lava Core": {
+        "minBuyout": 194000,
+        "quantity": 2,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 194000
+    },
+    "Ironweb Spider Silk": {
+        "minBuyout": 45000,
+        "quantity": 79,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 54047
+    },
+    "Bolt of Mageweave": {
+        "minBuyout": 14600,
+        "quantity": 58,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 14711
+    },
+    "Iron Strut": {
+        "minBuyout": 8498,
+        "quantity": 41,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 8499
+    },
+    "Wildvine": {
+        "minBuyout": 3083,
+        "quantity": 102,
+        "scannedAt": "2022-06-23T15:42:27.000Z",
+        "marketValue": 4004
+    }
+}

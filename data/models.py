@@ -1,3 +1,4 @@
+from typing import Optional
 from dataclasses import dataclass, field
 from dataclasses_json import config, dataclass_json
 
@@ -13,10 +14,10 @@ class Profession:
 @dataclass_json
 @dataclass(frozen=True)
 class MarketData:
-    market_value: int = field(metadata=config(field_name="marketValue"))
-    min_buyout: int = field(metadata=config(field_name="minBuyout"))
-    quantity: int
-    scanned_at: str = field(metadata=config(field_name="scannedAt"))
+    market_value: Optional[int] = field(metadata=config(field_name="marketValue"))
+    min_buyout: Optional[int] = field(metadata=config(field_name="minBuyout"))
+    quantity: Optional[int]
+    scanned_at: Optional[str] = field(metadata=config(field_name="scannedAt"))
 
 @dataclass_json
 @dataclass(frozen=True)
@@ -26,4 +27,4 @@ class MarketItem:
     name: str
     unique_name: str = field(metadata=config(field_name="uniqueName"))
     time_range: int = field(metadata=config(field_name="timerange"))
-    data: list[MarketData]
+    data: Optional[list[MarketData]]
