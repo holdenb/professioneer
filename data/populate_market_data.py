@@ -3,8 +3,10 @@ from functools import reduce
 import asyncio
 import aiohttp
 from models import Profession, MarketItem
+from ratelimiter import RateLimiter
 
 
+@RateLimiter(max_calls=20, period=5)
 async def request_price_data(url: str, session: aiohttp.ClientSession) -> dict:
     async with session.get(url) as resp:
         prices = await resp.json()
@@ -40,7 +42,9 @@ async def main(args: dict) -> None:
     # need to account for this
     async with aiohttp.ClientSession() as session:
         url = 'https://api.nexushub.co/wow-classic/v1/items/grobbulus-alliance/felsteel-bar/prices'
-        await request_price_data(url, session)
+        for i in range(1, 100):
+            await request_price_data(url, session)
+            print(i)
 
 
 if __name__ == "__main__":

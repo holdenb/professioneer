@@ -8,6 +8,7 @@ bs4 = "*"
 requests = "*"
 dataclasses-json = "*"
 aiohttp = "*"
+ratelimiter = "*"
 
 [dev-packages]
 pylint = "*"
