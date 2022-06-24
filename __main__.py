@@ -6,6 +6,12 @@ class Simulation:
     def __init__(self, patterns: list, market: dict):
         self.patterns = patterns
         self.market = market
+        self.probability_fn_mapping = \
+            Simulation.map_probability_fns(self.patterns)
+
+    @staticmethod
+    def map_probability_fns(patterns: dict) -> dict:
+        pass
 
 
 def main(args: dict) -> None:

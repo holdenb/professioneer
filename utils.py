@@ -1,6 +1,13 @@
 from collections import namedtuple
 
 
+# Pattern color skill-up probabilities
+PROB_ORANGE = 1.00
+PROB_YELLOW = 0.75
+PROB_GREEN = 0.25
+PROB_ZERO = 0.0
+
+
 def generate_skill_up_fn(pattern_skill: dict):
     lb_orange = int(pattern_skill['Orange'])
     lb_yellow = int(pattern_skill['Yellow'])
@@ -20,10 +27,12 @@ def generate_skill_up_fn(pattern_skill: dict):
         green = SkillThreshold(lb_green, lb_gray - 1)
 
         if orange.ub >= level >= orange.lb:
-            return 1.00
+            return PROB_ORANGE
         if yellow.ub >= level >= yellow.lb:
-            return 0.75
+            return PROB_YELLOW
         if green.ub >= level >= green.lb:
-            return 0.25
+            return PROB_GREEN
+
+        return PROB_ZERO
 
     return skill_up_fn
