@@ -47,19 +47,19 @@ async def main(args: dict) -> None:
         for unique_item_name in total_unique_materials:
             url = nexus_hub_price_url(args.server, args.faction, unique_item_name)
             market_item = await request_price_data(url, session)
-            
+
             # We only care about the most recent market data, i.e. the last
             # one in the market_data list
             data = market_item.data[-1] \
                 if market_item.data else MarketData(None, None, None, None)
             data = MarketData.schema().dump(data)
-            
+
             item_price_mapping[market_item.name] = data
 
     # Transform path/possible path to file into a filename prefix:
     # i.e. ie data/path/to/prof-engineering.json -> prof-engineering
     filename_prefix = args.profession_json_file.split('.')[:-1][0].split('/')[-1]
-    
+
     with open(f'{filename_prefix}-{args.server}-{args.faction}-market-data.json', 'w', encoding='utf-8') as file:
         json.dump(item_price_mapping, file)
 

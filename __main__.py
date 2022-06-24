@@ -12,7 +12,7 @@ def main(args: dict) -> None:
     crafting_patterns = [CraftingPattern]
     with open(args.profession_json_file, 'r', encoding='utf-8') as file:
         crafting_patterns = CraftingPattern.schema().load(json.load(file), many=True)
-
+        
     market_data = {}
     with open(args.market_data_file, 'r', encoding='utf-8') as file:
         market_data = json.load(file)
