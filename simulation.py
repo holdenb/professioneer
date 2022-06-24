@@ -1,5 +1,5 @@
 from dataclasses import dataclass, KW_ONLY
-from utils import generate_skill_up_fn, EMPTY_MAT_COST, MAX_CRAFTING_LV
+from utils import generate_skill_up_fn, EMPTY_MAT_COST
 
 
 @dataclass(frozen=True)
@@ -61,14 +61,27 @@ class Simulation:
 
         return sum_cost_mapping
 
+    def add_to_bank(self, name: str) -> None:
+        self.cm_bank[name] += 1
+
+    def pop_from_bank_if_exists(self, name: str) -> bool:
+        val = self.cm_bank.get(name, 0)
+        if val == 0:
+            return False
+        self.cm_bank[name] -= 1
+        return True
+
     def step(self, level: int) -> SimulationStep:
+        # If crafting material -> push to bank:
+        # if not, check bank for a material that we've already
+        # crafted -> if exists, pop and reduce cost to 0
         return SimulationStep(1, 1)
 
     def run_simulation(self, config: RunConfigs) -> None:
         for _ in range(config.simulations):
             current_lv = 0
             total_cost = 0
-            while current_lv != MAX_CRAFTING_LV:
+            while current_lv != config.simulated_lv:
                 step = self.step(current_lv)
                 current_lv += step.level
                 total_cost += step.cost

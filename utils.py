@@ -11,10 +11,6 @@ PROB_ZERO = 0.0
 # quantity
 EMPTY_MAT_COST = 999999999
 
-# Maximum crafting level to achieve before running the
-# next simulation
-MAX_CRAFTING_LV = 300
-
 
 def compute_wci_cost(sum_cost: float, p_crafting: float, available_mats: bool=True) -> float:
     return (p_crafting * int(available_mats)) / sum_cost
