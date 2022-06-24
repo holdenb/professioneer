@@ -1,17 +1,6 @@
 import json
 from data.datamodels import CraftingPattern, MarketData
-
-
-class Simulation:
-    def __init__(self, patterns: list, market: dict):
-        self.patterns = patterns
-        self.market = market
-        self.probability_fn_mapping = \
-            Simulation.map_probability_fns(self.patterns)
-
-    @staticmethod
-    def map_probability_fns(patterns: dict) -> dict:
-        pass
+from simulation import Simulation, RunConfigs
 
 
 def main(args: dict) -> None:
@@ -25,6 +14,7 @@ def main(args: dict) -> None:
         market_data = {k: MarketData.schema().load(v) for k, v in market_data.items()}
 
     sim = Simulation(crafting_patterns, market_data)
+    sim.run_simulation(RunConfigs(simulated_lv=90, simulations=10000))
 
 
 if __name__ == "__main__":
