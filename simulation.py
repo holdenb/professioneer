@@ -5,7 +5,8 @@ from utils import generate_skill_up_fn, EMPTY_MAT_COST
 @dataclass(frozen=True)
 class RunConfigs:
     _: KW_ONLY
-    simulated_lv: int
+    sim_start_lv: int
+    sim_end_lv: int
     simulations: int
 
 
@@ -75,13 +76,22 @@ class Simulation:
         # If crafting material -> push to bank:
         # if not, check bank for a material that we've already
         # crafted -> if exists, pop and reduce cost to 0
+
+        # Pre-compute probabilities across all available patterns
+        probabilities = {}
+        for (name, compute_prob) in self.probability_fn_mapping.items():
+            probabilities[name] = compute_prob(level)
+
+        # Filter out 0 probability patterns
+        probabilities = dict(filter(lambda x: x[1] != 0.0, probabilities.items()))
+        
         return SimulationStep(1, 1)
 
     def run_simulation(self, config: RunConfigs) -> None:
         for _ in range(config.simulations):
-            current_lv = 0
+            current_lv = config.sim_start_lv
             total_cost = 0
-            while current_lv != config.simulated_lv:
+            while current_lv != config.sim_end_lv:
                 step = self.step(current_lv)
                 current_lv += step.level
                 total_cost += step.cost
