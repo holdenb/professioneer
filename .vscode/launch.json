@@ -13,7 +13,7 @@
             "justMyCode": true,
             "args": [
                 "-p", "${workspaceRoot}\\data\\prof-engineering-no-fireworks.json",
-                "-m", "${workspaceRoot}\\data\\prof-engineering-benediction-alliance-market-data.json"
+                "-m", "${workspaceRoot}\\data\\prof-engineering-benediction-horde-market-data.json"
             ],
         }
     ]

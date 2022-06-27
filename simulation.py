@@ -69,14 +69,24 @@ class Simulation:
         return sum_cost_mapping
 
     def add_to_bank(self, name: str) -> None:
+        if name not in self.cm_bank.keys():
+            self.cm_bank[name] = 1
+            return
         self.cm_bank[name] += 1
 
-    def pop_from_bank_if_exists(self, name: str) -> bool:
-        val = self.cm_bank.get(name, 0)
-        if val == 0:
-            return False
-        self.cm_bank[name] -= 1
-        return True
+    def pop_materials_from_bank_if_exists(self, pattern: CraftingPattern) -> None:
+        for (name, qty) in pattern.materials.items():
+            ct_in_bank = self.cm_bank.get(name)
+            if ct_in_bank is None:
+                continue
+
+            if ct_in_bank > qty:
+                self.cm_bank[name] -= qty
+            else:
+                del self.cm_bank[name]
+
+    def is_in_bank(self, name: str) -> bool:
+        return name in self.cm_bank.keys()
 
     def compute_score(self, pattern: CraftingPattern, prob_crafting: int, bank_fn):
         pattern_cost = 0
@@ -100,7 +110,7 @@ class Simulation:
         # Filter out 0 probability patterns
         probabilities = dict(filter(lambda x: x[1] != 0.0, probabilities.items()))
 
-        def default_bank_fn(_) -> bool:
+        def skip_bank_check(_) -> bool:
             return False
 
         # Compute cost for all patterns that match those where P != 0
@@ -110,12 +120,15 @@ class Simulation:
         wci_mapping = {}
         for (k, p_crafting) in probabilities.items():
             pattern = self.patterns[k]
-            is_m_material = pattern.category == CATEGORY_NAME_MATERIAL
+            is_not_m_material = pattern.category != CATEGORY_NAME_MATERIAL
 
             # Return False from bank if material is not used in
             # future crafting scenarios
-            bank_fn = self.pop_from_bank_if_exists \
-                if is_m_material else default_bank_fn
+            #
+            # Category will not relate to crafting, thus we know that this pattern
+            # may include material=Crafting within the pattern
+            bank_fn = self.is_in_bank \
+                if is_not_m_material else skip_bank_check
 
             (score, cost) = self.compute_score(pattern, p_crafting, bank_fn)
             wci_mapping[k] = (score, cost)
@@ -124,6 +137,15 @@ class Simulation:
         # we will choose to craft. Remember: Max cost means we're MAXIMIZING a cost function
         # I.e. the cost function will give us the highest output for low cost/high prob patterns
         (name, (score, cost)) = max(wci_mapping.items(), key=lambda x: x[1])
+
+        chosen_pattern = self.patterns[name]
+        # If the chosen pattern is a crafting material, add that material
+        # to our bank to augment future pattern WCI score
+        is_m_material = chosen_pattern.category == CATEGORY_NAME_MATERIAL
+        if is_m_material:
+            self.add_to_bank(name)
+        else:
+            self.pop_materials_from_bank_if_exists(chosen_pattern)
 
         # Simulate a crafting scenario where we "roll" against the
         # probability of crafting the chosen pattern with max WCI score
