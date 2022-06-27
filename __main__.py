@@ -7,14 +7,14 @@ def main(args: dict) -> None:
     crafting_patterns = [CraftingPattern]
     with open(args.profession_json_file, 'r', encoding='utf-8') as file:
         crafting_patterns = CraftingPattern.schema().load(json.load(file), many=True)
-        
+
     market_data = {}
     with open(args.market_data_file, 'r', encoding='utf-8') as file:
         market_data = json.load(file)
         market_data = {k: MarketData.schema().load(v) for k, v in market_data.items()}
 
     sim = Simulation(crafting_patterns, market_data)
-    sim.run_simulation(RunConfigs(sim_start_lv=1, sim_end_lv=300, simulations=10000))
+    sim.run_simulation(RunConfigs(sim_start_lv=1, sim_end_lv=300, simulations=1))
 
 
 if __name__ == "__main__":

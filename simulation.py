@@ -1,5 +1,8 @@
+import math
+import random
 from dataclasses import dataclass, KW_ONLY
-from utils import generate_skill_up_fn, EMPTY_MAT_COST
+from data.datamodels import CraftingPattern
+from utils import compute_wci, generate_skill_up_fn, EMPTY_MAT_COST, CATEGORY_NAME_MATERIAL
 
 
 @dataclass(frozen=True)
@@ -14,6 +17,7 @@ class RunConfigs:
 class SimulationStep:
     level: int
     cost: int
+    pattern_name: str
 
 
 class Simulation:
@@ -28,12 +32,11 @@ class Simulation:
 
     @staticmethod
     def map_probability_fns(patterns: dict) -> dict:
-        return {pattern.item: generate_skill_up_fn(pattern.skill) for pattern in patterns}
+        return {name: generate_skill_up_fn(p.skill) for (name, p) in patterns.items()}
 
     @staticmethod
-    def augment_patterns_to_include_cost(patterns: dict, market: dict) -> dict:
-        pw_cost = patterns.copy()
-        for pat in pw_cost:
+    def augment_patterns_to_include_cost(patterns: list , market: dict) -> dict:
+        for pat in patterns:
             mats = pat.materials
             for (name, _) in mats.items():
                 unit_cost = market[name].market_value
@@ -41,7 +44,10 @@ class Simulation:
                     unit_cost = EMPTY_MAT_COST
                 pat.cost[name] = unit_cost
 
-        return pw_cost
+        # Convert to mapping before returning
+        patterns = {p.item: p for p in patterns}
+
+        return patterns
 
     @staticmethod
     def map_sum_costs(patterns: dict, market: dict) -> dict:
@@ -72,6 +78,15 @@ class Simulation:
         self.cm_bank[name] -= 1
         return True
 
+    def compute_score(self, pattern: CraftingPattern, prob_crafting: int, bank_fn):
+        pattern_cost = 0
+        for (name, qty) in pattern.materials.items():
+            in_bank = bank_fn(name)
+            pattern_cost += 0 if in_bank else pattern.cost[name] * qty
+
+        # For now we'll assume all materials are always available
+        return (compute_wci(pattern_cost, prob_crafting), pattern_cost)
+
     def step(self, level: int) -> SimulationStep:
         # If crafting material -> push to bank:
         # if not, check bank for a material that we've already
@@ -84,14 +99,54 @@ class Simulation:
 
         # Filter out 0 probability patterns
         probabilities = dict(filter(lambda x: x[1] != 0.0, probabilities.items()))
-        
-        return SimulationStep(1, 1)
+
+        def default_bank_fn(_) -> bool:
+            return False
+
+        # Compute cost for all patterns that match those where P != 0
+        # and then use the cost to create a WCI score (worthy crafting index score)
+        # for each of those patterns
+        # Mapping from {name -> (wci, cost)} tuples
+        wci_mapping = {}
+        for (k, p_crafting) in probabilities.items():
+            pattern = self.patterns[k]
+            is_m_material = pattern.category == CATEGORY_NAME_MATERIAL
+
+            # Return False from bank if material is not used in
+            # future crafting scenarios
+            bank_fn = self.pop_from_bank_if_exists \
+                if is_m_material else default_bank_fn
+
+            (score, cost) = self.compute_score(pattern, p_crafting, bank_fn)
+            wci_mapping[k] = (score, cost)
+
+        # Select the max cost from the wci_mapping as the pattern that
+        # we will choose to craft. Remember: Max cost means we're MAXIMIZING a cost function
+        # I.e. the cost function will give us the highest output for low cost/high prob patterns
+        (name, (score, cost)) = max(wci_mapping.items(), key=lambda x: x[1])
+
+        updated_lv = 0
+        p_craft = probabilities[name] * 10 * 100
+        p_roll = random.randrange(1, 10001)
+        if p_roll <= p_craft:
+            updated_lv += 1
+
+        # Cost will stay the same regardless if we are "able" to
+        # craft the pattern
+        return SimulationStep(updated_lv, cost, name)
 
     def run_simulation(self, config: RunConfigs) -> None:
         for _ in range(config.simulations):
             current_lv = config.sim_start_lv
             total_cost = 0
+            crafting_path = []
             while current_lv != config.sim_end_lv:
                 step = self.step(current_lv)
                 current_lv += step.level
                 total_cost += step.cost
+                crafting_path.append(step.pattern_name)
+
+            cost_gold = ((total_cost / 100) / 100)
+
+            print(f'lv: {current_lv} | cost: {cost_gold}')
+            print(f'Path: {crafting_path}')
