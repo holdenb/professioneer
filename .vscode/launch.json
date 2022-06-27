@@ -12,8 +12,8 @@
             "console": "integratedTerminal",
             "justMyCode": true,
             "args": [
-                "-p", "${workspaceRoot}\\data\\prof-engineering.json",
-                "-m", "${workspaceRoot}\\data\\prof-engineering-grobbulus-alliance-market-data.json"
+                "-p", "${workspaceRoot}\\data\\prof-engineering-no-fireworks.json",
+                "-m", "${workspaceRoot}\\data\\prof-engineering-benediction-alliance-market-data.json"
             ],
         }
     ]

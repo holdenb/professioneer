@@ -125,11 +125,12 @@ class Simulation:
         # I.e. the cost function will give us the highest output for low cost/high prob patterns
         (name, (score, cost)) = max(wci_mapping.items(), key=lambda x: x[1])
 
-        updated_lv = 0
+        # Simulate a crafting scenario where we "roll" against the
+        # probability of crafting the chosen pattern with max WCI score
         p_craft = probabilities[name] * 10 * 100
-        p_roll = random.randrange(1, 10001)
-        if p_roll <= p_craft:
-            updated_lv += 1
+        p_roll = random.randrange(1, 1001)
+        should_lv = p_roll <= p_craft
+        updated_lv = level + 1 if should_lv else level
 
         # Cost will stay the same regardless if we are "able" to
         # craft the pattern
@@ -142,11 +143,20 @@ class Simulation:
             crafting_path = []
             while current_lv != config.sim_end_lv:
                 step = self.step(current_lv)
-                current_lv += step.level
+                # Replace level & add the cost
+                current_lv = step.level
                 total_cost += step.cost
                 crafting_path.append(step.pattern_name)
 
             cost_gold = ((total_cost / 100) / 100)
 
             print(f'lv: {current_lv} | cost: {cost_gold}')
-            print(f'Path: {crafting_path}')
+
+            # Frequency count for debugging
+            freq = {}
+            for item in crafting_path:
+                if item in freq:
+                    freq[item] += 1
+                else:
+                    freq[item] = 1
+            print(f'Path: {freq}')

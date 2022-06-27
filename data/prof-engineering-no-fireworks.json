@@ -1,0 +1,1842 @@
+[
+    {
+        "Item": "Rough Blasting Powder",
+        "Category": "Crafting material",
+        "Materials": {
+            "Rough Stone": 1
+        },
+        "Skill": {
+            "Orange": "1",
+            "Yellow": "20",
+            "Green": "30",
+            "Gray": "40"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Rough Dynamite",
+        "Category": "Explosive",
+        "Materials": {
+            "Rough Blasting Powder": 1,
+            "Linen Cloth": 1
+        },
+        "Skill": {
+            "Orange": "1",
+            "Yellow": "30",
+            "Green": "45",
+            "Gray": "60"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Handful of Copper Bolts",
+        "Category": "Crafting material",
+        "Materials": {
+            "Copper Bar": 1
+        },
+        "Skill": {
+            "Orange": "30",
+            "Yellow": "45",
+            "Green": "53",
+            "Gray": "60"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Rough Copper Bomb",
+        "Category": "Explosive",
+        "Materials": {
+            "Handful of Copper Bolts": 1,
+            "Rough Blasting Powder": 2
+        },
+        "Skill": {
+            "Orange": "30",
+            "Yellow": "60",
+            "Green": "75",
+            "Gray": "90"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Arclight Spanner",
+        "Category": "Tool",
+        "Materials": {
+            "Copper Bar": 6
+        },
+        "Skill": {
+            "Orange": "50",
+            "Yellow": "70",
+            "Green": "80",
+            "Gray": "90"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Rough Boomstick",
+        "Category": "Gun",
+        "Materials": {
+            "Copper Bar": 4,
+            "Handful of Copper Bolts": 3,
+            "Wooden Stock": 1
+        },
+        "Skill": {
+            "Orange": "50",
+            "Yellow": "80",
+            "Green": "95",
+            "Gray": "110"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Crude Scope",
+        "Category": "Item enhancement",
+        "Materials": {
+            "Malachite": 1,
+            "Copper Bar": 2,
+            "Handful of Copper Bolts": 1
+        },
+        "Skill": {
+            "Orange": "60",
+            "Yellow": "90",
+            "Green": "105",
+            "Gray": "120"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Coarse Blasting Powder",
+        "Category": "Crafting material",
+        "Materials": {
+            "Coarse Stone": 1
+        },
+        "Skill": {
+            "Orange": "65",
+            "Yellow": "85",
+            "Green": "90",
+            "Gray": "95"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Coarse Dynamite",
+        "Category": "Explosive",
+        "Materials": {
+            "Coarse Blasting Powder": 1,
+            "Linen Cloth": 1
+        },
+        "Skill": {
+            "Orange": "68",
+            "Yellow": "95",
+            "Green": "100",
+            "Gray": "105"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Mechanical Squirrel Box",
+        "Category": "Companion",
+        "Materials": {
+            "Malachite": 2,
+            "Copper Bar": 1,
+            "Handful of Copper Bolts": 1
+        },
+        "Skill": {
+            "Orange": "75",
+            "Yellow": "105",
+            "Green": "120",
+            "Gray": "135"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Target Dummy",
+        "Category": "Device",
+        "Materials": {
+            "Bronze Bar": 2,
+            "Wool Cloth": 2
+        },
+        "Skill": {
+            "Orange": "85",
+            "Yellow": "115",
+            "Green": "130",
+            "Gray": "145"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Silver Contact",
+        "Category": "Crafting material",
+        "Materials": {
+            "Silver Bar": 1
+        },
+        "Skill": {
+            "Orange": "90",
+            "Yellow": "110",
+            "Green": "125",
+            "Gray": "140"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Ez-Thro Dynamite",
+        "Category": "Explosive",
+        "Materials": {
+            "Coarse Blasting Powder": 4,
+            "Wool Cloth": 1
+        },
+        "Skill": {
+            "Orange": "100",
+            "Yellow": "115",
+            "Green": "123",
+            "Gray": "130"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Clockwork Box",
+        "Category": "Device",
+        "Materials": {
+            "Bronze Bar": 3
+        },
+        "Skill": {
+            "Orange": "100",
+            "Yellow": "125",
+            "Green": "125",
+            "Gray": "125"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Flying Tiger Goggles",
+        "Category": "Cloth",
+        "Materials": {
+            "Tigerseye": 2,
+            "Light Leather": 6
+        },
+        "Skill": {
+            "Orange": "100",
+            "Yellow": "130",
+            "Green": "145",
+            "Gray": "160"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Small Seaforium Charge",
+        "Category": "Explosive",
+        "Materials": {
+            "Coarse Blasting Powder": 2,
+            "Copper Modulator": 1,
+            "Light Leather": 1,
+            "Refreshing Spring Water": 1
+        },
+        "Skill": {
+            "Orange": "100",
+            "Yellow": "130",
+            "Green": "145",
+            "Gray": "160"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Bronze Tube",
+        "Category": "Crafting material",
+        "Materials": {
+            "Bronze Bar": 2
+        },
+        "Skill": {
+            "Orange": "105",
+            "Yellow": "115",
+            "Green": "135",
+            "Gray": "155"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Large Copper Bomb",
+        "Category": "Explosive",
+        "Materials": {
+            "Copper Bar": 3,
+            "Coarse Blasting Powder": 4,
+            "Silver Contact": 1
+        },
+        "Skill": {
+            "Orange": "105",
+            "Yellow": "125",
+            "Green": "140",
+            "Gray": "155"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Deadly Blunderbuss",
+        "Category": "Gun",
+        "Materials": {
+            "Bronze Tube": 4,
+            "Standard Scope": 1,
+            "Wooden Stock": 1
+        },
+        "Skill": {
+            "Orange": "105",
+            "Yellow": "130",
+            "Green": "143",
+            "Gray": "155"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Standard Scope",
+        "Category": "Item enhancement",
+        "Materials": {
+            "Moss Agate": 1,
+            "Bronze Tube": 1
+        },
+        "Skill": {
+            "Orange": "110",
+            "Yellow": "135",
+            "Green": "148",
+            "Gray": "160"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Small Bronze Bomb",
+        "Category": "Explosive",
+        "Materials": {
+            "Bronze Bar": 2,
+            "Coarse Blasting Powder": 4,
+            "Silver Contact": 1,
+            "Wool Cloth": 1
+        },
+        "Skill": {
+            "Orange": "120",
+            "Yellow": "120",
+            "Green": "145",
+            "Gray": "170"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Lovingly Crafted Boomstick",
+        "Category": "Gun",
+        "Materials": {
+            "Moss Agate": 3,
+            "Bronze Tube": 2,
+            "Handful of Copper Bolts": 2,
+            "Heavy Stock": 1
+        },
+        "Skill": {
+            "Orange": "120",
+            "Yellow": "145",
+            "Green": "158",
+            "Gray": "170"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Shadow Goggles",
+        "Category": "Cloth",
+        "Materials": {
+            "Shadowgem": 2,
+            "Medium Leather": 4
+        },
+        "Skill": {
+            "Orange": "120",
+            "Yellow": "145",
+            "Green": "158",
+            "Gray": "170"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Flame Deflector",
+        "Category": "Other",
+        "Materials": {
+            "Small Flame Sac": 1,
+            "Whirring Bronze Gizmo": 1
+        },
+        "Skill": {
+            "Orange": "125",
+            "Yellow": "125",
+            "Green": "150",
+            "Gray": "175"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Heavy Blasting Powder",
+        "Category": "Crafting material",
+        "Materials": {
+            "Heavy Stone": 1
+        },
+        "Skill": {
+            "Orange": "125",
+            "Yellow": "125",
+            "Green": "135",
+            "Gray": "145"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Heavy Dynamite",
+        "Category": "Explosive",
+        "Materials": {
+            "Heavy Blasting Powder": 2,
+            "Wool Cloth": 1
+        },
+        "Skill": {
+            "Orange": "125",
+            "Yellow": "125",
+            "Green": "135",
+            "Gray": "145"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Whirring Bronze Gizmo",
+        "Category": "Crafting material",
+        "Materials": {
+            "Bronze Bar": 2,
+            "Wool Cloth": 1
+        },
+        "Skill": {
+            "Orange": "125",
+            "Yellow": "125",
+            "Green": "150",
+            "Gray": "175"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Gnomish Universal Remote",
+        "Category": "Trinket",
+        "Materials": {
+            "Malachite": 1,
+            "Tigerseye": 1,
+            "Bronze Bar": 6,
+            "Flask of Oil": 2,
+            "Whirring Bronze Gizmo": 1
+        },
+        "Skill": {
+            "Orange": "125",
+            "Yellow": "150",
+            "Green": "163",
+            "Gray": "175"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Silver-plated Shotgun",
+        "Category": "Gun",
+        "Materials": {
+            "Silver Bar": 3,
+            "Bronze Tube": 2,
+            "Heavy Stock": 1,
+            "Whirring Bronze Gizmo": 2
+        },
+        "Skill": {
+            "Orange": "130",
+            "Yellow": "155",
+            "Green": "168",
+            "Gray": "180"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Ornate Spyglass",
+        "Category": "Device",
+        "Materials": {
+            "Moss Agate": 1,
+            "Bronze Tube": 2,
+            "Copper Modulator": 1,
+            "Whirring Bronze Gizmo": 2
+        },
+        "Skill": {
+            "Orange": "135",
+            "Yellow": "160",
+            "Green": "173",
+            "Gray": "185"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Big Bronze Bomb",
+        "Category": "Explosive",
+        "Materials": {
+            "Bronze Bar": 3,
+            "Heavy Blasting Powder": 2,
+            "Silver Contact": 1
+        },
+        "Skill": {
+            "Orange": "140",
+            "Yellow": "140",
+            "Green": "165",
+            "Gray": "190"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Minor Recombobulator",
+        "Category": "Trinket",
+        "Materials": {
+            "Moss Agate": 1,
+            "Bronze Tube": 1,
+            "Medium Leather": 2,
+            "Whirring Bronze Gizmo": 2
+        },
+        "Skill": {
+            "Orange": "140",
+            "Yellow": "165",
+            "Green": "178",
+            "Gray": "190"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Bronze Framework",
+        "Category": "Crafting material",
+        "Materials": {
+            "Bronze Bar": 2,
+            "Medium Leather": 1,
+            "Wool Cloth": 1
+        },
+        "Skill": {
+            "Orange": "145",
+            "Yellow": "145",
+            "Green": "170",
+            "Gray": "195"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Moonsight Rifle",
+        "Category": "Gun",
+        "Materials": {
+            "Lesser Moonstone": 2,
+            "Bronze Tube": 3,
+            "Heavy Stock": 1,
+            "Whirring Bronze Gizmo": 3
+        },
+        "Skill": {
+            "Orange": "145",
+            "Yellow": "170",
+            "Green": "183",
+            "Gray": "195"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Aquadynamic Fish Attractor",
+        "Category": "Device",
+        "Materials": {
+            "Bronze Bar": 2,
+            "Coarse Blasting Powder": 1,
+            "Nightcrawlers": 1
+        },
+        "Skill": {
+            "Orange": "150",
+            "Yellow": "150",
+            "Green": "160",
+            "Gray": "170"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Gold Power Core",
+        "Category": "Crafting material",
+        "Materials": {
+            "Gold Bar": 1
+        },
+        "Skill": {
+            "Orange": "150",
+            "Yellow": "150",
+            "Green": "170",
+            "Gray": "190"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Explosive Sheep",
+        "Category": "Explosive",
+        "Materials": {
+            "Bronze Framework": 1,
+            "Heavy Blasting Powder": 2,
+            "Whirring Bronze Gizmo": 1,
+            "Wool Cloth": 2
+        },
+        "Skill": {
+            "Orange": "150",
+            "Yellow": "175",
+            "Green": "188",
+            "Gray": "200"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Green Tinted Goggles",
+        "Category": "Cloth",
+        "Materials": {
+            "Moss Agate": 2,
+            "Flying Tiger Goggles": 1,
+            "Medium Leather": 4
+        },
+        "Skill": {
+            "Orange": "150",
+            "Yellow": "175",
+            "Green": "188",
+            "Gray": "200"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Ice Deflector",
+        "Category": "Device",
+        "Materials": {
+            "Frost Oil": 1,
+            "Whirring Bronze Gizmo": 1
+        },
+        "Skill": {
+            "Orange": "155",
+            "Yellow": "175",
+            "Green": "185",
+            "Gray": "195"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Iron Strut",
+        "Category": "Crafting material",
+        "Materials": {
+            "Iron Bar": 2
+        },
+        "Skill": {
+            "Orange": "160",
+            "Yellow": "160",
+            "Green": "170",
+            "Gray": "180"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Discombobulator Ray",
+        "Category": "Device",
+        "Materials": {
+            "Jade": 1,
+            "Bronze Tube": 1,
+            "Silk Cloth": 2,
+            "Whirring Bronze Gizmo": 3
+        },
+        "Skill": {
+            "Orange": "160",
+            "Yellow": "180",
+            "Green": "190",
+            "Gray": "200"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Goblin Jumper Cables",
+        "Category": "Device",
+        "Materials": {
+            "Shadowgem": 2,
+            "Iron Bar": 6,
+            "Flask of Oil": 2,
+            "Fused Wiring": 1,
+            "Silk Cloth": 2,
+            "Whirring Bronze Gizmo": 2
+        },
+        "Skill": {
+            "Orange": "165",
+            "Yellow": "165",
+            "Green": "180",
+            "Gray": "200"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Portable Bronze Mortar",
+        "Category": "Explosive",
+        "Materials": {
+            "Bronze Tube": 4,
+            "Heavy Blasting Powder": 4,
+            "Iron Strut": 1,
+            "Medium Leather": 4
+        },
+        "Skill": {
+            "Orange": "165",
+            "Yellow": "185",
+            "Green": "195",
+            "Gray": "205"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Gyrochronatom",
+        "Category": "Crafting material",
+        "Materials": {
+            "Iron Bar": 1,
+            "Gold Power Core": 1
+        },
+        "Skill": {
+            "Orange": "170",
+            "Yellow": "170",
+            "Green": "190",
+            "Gray": "210"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Solid Blasting Powder",
+        "Category": "Crafting material",
+        "Materials": {
+            "Solid Stone": 2
+        },
+        "Skill": {
+            "Orange": "175",
+            "Yellow": "175",
+            "Green": "185",
+            "Gray": "195"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Solid Dynamite",
+        "Category": "Explosive",
+        "Materials": {
+            "Silk Cloth": 1,
+            "Solid Blasting Powder": 1
+        },
+        "Skill": {
+            "Orange": "175",
+            "Yellow": "175",
+            "Green": "185",
+            "Gray": "195"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Compact Harvest Reaper Kit",
+        "Category": "Device",
+        "Materials": {
+            "Bronze Framework": 1,
+            "Gyrochronatom": 2,
+            "Heavy Leather": 4,
+            "Iron Strut": 2
+        },
+        "Skill": {
+            "Orange": "175",
+            "Yellow": "175",
+            "Green": "195",
+            "Gray": "215"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Gyromatic Micro-Adjustor",
+        "Category": "Tool",
+        "Materials": {
+            "Steel Bar": 4
+        },
+        "Skill": {
+            "Orange": "175",
+            "Yellow": "175",
+            "Green": "195",
+            "Gray": "215"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Iron Grenade",
+        "Category": "Explosive",
+        "Materials": {
+            "Iron Bar": 1,
+            "Heavy Blasting Powder": 1,
+            "Silk Cloth": 1
+        },
+        "Skill": {
+            "Orange": "175",
+            "Yellow": "175",
+            "Green": "195",
+            "Gray": "215"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Bright-Eye Goggles",
+        "Category": "Cloth",
+        "Materials": {
+            "Citrine": 2,
+            "Heavy Leather": 6
+        },
+        "Skill": {
+            "Orange": "175",
+            "Yellow": "195",
+            "Green": "205",
+            "Gray": "215"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Accurate Scope",
+        "Category": "Item enhancement",
+        "Materials": {
+            "Citrine": 1,
+            "Jade": 1,
+            "Bronze Tube": 1
+        },
+        "Skill": {
+            "Orange": "180",
+            "Yellow": "200",
+            "Green": "210",
+            "Gray": "220"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Advanced Target Dummy",
+        "Category": "Device",
+        "Materials": {
+            "Bronze Framework": 1,
+            "Gyrochronatom": 1,
+            "Heavy Leather": 4,
+            "Iron Strut": 1
+        },
+        "Skill": {
+            "Orange": "185",
+            "Yellow": "185",
+            "Green": "205",
+            "Gray": "225"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Flash Bomb",
+        "Category": "Explosive",
+        "Materials": {
+            "Blue Pearl": 1,
+            "Heavy Blasting Powder": 1,
+            "Silk Cloth": 1
+        },
+        "Skill": {
+            "Orange": "185",
+            "Yellow": "185",
+            "Green": "205",
+            "Gray": "225"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Craftsman's Monocle",
+        "Category": "Cloth",
+        "Materials": {
+            "Citrine": 2,
+            "Heavy Leather": 6
+        },
+        "Skill": {
+            "Orange": "185",
+            "Yellow": "205",
+            "Green": "215",
+            "Gray": "225"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Big Iron Bomb",
+        "Category": "Explosive",
+        "Materials": {
+            "Iron Bar": 3,
+            "Heavy Blasting Powder": 3,
+            "Silver Contact": 1
+        },
+        "Skill": {
+            "Orange": "190",
+            "Yellow": "190",
+            "Green": "210",
+            "Gray": "230"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Snowmaster 9000",
+        "Category": "Toy",
+        "Materials": {
+            "Mithril Bar": 8,
+            "Frost Oil": 1,
+            "Gyrochronatom": 4,
+            "Snowball": 4
+        },
+        "Skill": {
+            "Orange": "190",
+            "Yellow": "190",
+            "Green": "210",
+            "Gray": "230"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Mithril Tube",
+        "Category": "Crafting material",
+        "Materials": {
+            "Mithril Bar": 3
+        },
+        "Skill": {
+            "Orange": "195",
+            "Yellow": "195",
+            "Green": "215",
+            "Gray": "235"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Goblin Land Mine",
+        "Category": "Explosive",
+        "Materials": {
+            "Iron Bar": 2,
+            "Gyrochronatom": 1,
+            "Heavy Blasting Powder": 3
+        },
+        "Skill": {
+            "Orange": "195",
+            "Yellow": "215",
+            "Green": "225",
+            "Gray": "235"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Ez-Thro Dynamite II",
+        "Category": "Explosive",
+        "Materials": {
+            "Mageweave Cloth": 2,
+            "Solid Blasting Powder": 1
+        },
+        "Skill": {
+            "Orange": "200",
+            "Yellow": "200",
+            "Green": "210",
+            "Gray": "220"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Large Seaforium Charge",
+        "Category": "Explosive",
+        "Materials": {
+            "Heavy Leather": 2,
+            "Refreshing Spring Water": 1,
+            "Solid Blasting Powder": 2
+        },
+        "Skill": {
+            "Orange": "200",
+            "Yellow": "200",
+            "Green": "220",
+            "Gray": "240"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Mechanical Repair Kit",
+        "Category": "Device",
+        "Materials": {
+            "Mithril Bar": 1,
+            "Mageweave Cloth": 1,
+            "Solid Blasting Powder": 1
+        },
+        "Skill": {
+            "Orange": "200",
+            "Yellow": "200",
+            "Green": "220",
+            "Gray": "240"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Unstable Trigger",
+        "Category": "Crafting material",
+        "Materials": {
+            "Mithril Bar": 1,
+            "Mageweave Cloth": 1,
+            "Solid Blasting Powder": 1
+        },
+        "Skill": {
+            "Orange": "200",
+            "Yellow": "200",
+            "Green": "220",
+            "Gray": "240"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Gnomish Cloaking Device",
+        "Category": "Trinket",
+        "Materials": {
+            "Citrine": 2,
+            "Jade": 2,
+            "Lesser Moonstone": 2,
+            "Fused Wiring": 1,
+            "Gyrochronatom": 4
+        },
+        "Skill": {
+            "Orange": "200",
+            "Yellow": "220",
+            "Green": "230",
+            "Gray": "240"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Mechanical Dragonling",
+        "Category": "Trinket",
+        "Materials": {
+            "Citrine": 1,
+            "Bronze Framework": 1,
+            "Gyrochronatom": 2,
+            "Iron Strut": 2
+        },
+        "Skill": {
+            "Orange": "200",
+            "Yellow": "220",
+            "Green": "230",
+            "Gray": "240"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Lil' Smoky",
+        "Category": "Companion",
+        "Materials": {
+            "Truesilver Bar": 1,
+            "Mithril Bar": 2,
+            "Core of Earth": 1,
+            "Fused Wiring": 1,
+            "Gyrochronatom": 2
+        },
+        "Skill": {
+            "Orange": "205",
+            "Yellow": "205",
+            "Green": "205",
+            "Gray": "205"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Pet Bombling",
+        "Category": "Companion",
+        "Materials": {
+            "Mithril Bar": 6,
+            "Big Iron Bomb": 1,
+            "Fused Wiring": 1,
+            "Heart of Fire": 1
+        },
+        "Skill": {
+            "Orange": "205",
+            "Yellow": "205",
+            "Green": "205",
+            "Gray": "205"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Fire Goggles",
+        "Category": "Cloth",
+        "Materials": {
+            "Citrine": 2,
+            "Green Tinted Goggles": 1,
+            "Elemental Fire": 2,
+            "Heavy Leather": 4
+        },
+        "Skill": {
+            "Orange": "205",
+            "Yellow": "225",
+            "Green": "235",
+            "Gray": "245"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Mithril Blunderbuss",
+        "Category": "Gun",
+        "Materials": {
+            "Mithril Bar": 4,
+            "Elemental Fire": 2,
+            "Heavy Stock": 1,
+            "Mithril Tube": 1,
+            "Unstable Trigger": 1
+        },
+        "Skill": {
+            "Orange": "205",
+            "Yellow": "225",
+            "Green": "235",
+            "Gray": "245"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Deadly Scope",
+        "Category": "Item enhancement",
+        "Materials": {
+            "Aquamarine": 2,
+            "Mithril Tube": 1,
+            "Thick Leather": 2
+        },
+        "Skill": {
+            "Orange": "210",
+            "Yellow": "230",
+            "Green": "240",
+            "Gray": "250"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Mithril Casing",
+        "Category": "Crafting material",
+        "Materials": {
+            "Mithril Bar": 3
+        },
+        "Skill": {
+            "Orange": "215",
+            "Yellow": "215",
+            "Green": "235",
+            "Gray": "255"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Mithril Frag Bomb",
+        "Category": "Explosive",
+        "Materials": {
+            "Mithril Casing": 1,
+            "Solid Blasting Powder": 1,
+            "Unstable Trigger": 1
+        },
+        "Skill": {
+            "Orange": "215",
+            "Yellow": "215",
+            "Green": "235",
+            "Gray": "255"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Catseye Ultra Goggles",
+        "Category": "Cloth",
+        "Materials": {
+            "Aquamarine": 2,
+            "Catseye Elixir": 1,
+            "Thick Leather": 4
+        },
+        "Skill": {
+            "Orange": "220",
+            "Yellow": "240",
+            "Green": "250",
+            "Gray": "260"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Mithril Heavy-Bore Rifle",
+        "Category": "Gun",
+        "Materials": {
+            "Citrine": 2,
+            "Mithril Bar": 6,
+            "Heavy Stock": 1,
+            "Mithril Tube": 2,
+            "Unstable Trigger": 1
+        },
+        "Skill": {
+            "Orange": "220",
+            "Yellow": "240",
+            "Green": "250",
+            "Gray": "260"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Parachute Cloak",
+        "Category": "Cloak",
+        "Materials": {
+            "Bolt of Mageweave": 4,
+            "Shadow Silk": 2,
+            "Solid Blasting Powder": 4,
+            "Unstable Trigger": 1
+        },
+        "Skill": {
+            "Orange": "225",
+            "Yellow": "245",
+            "Green": "255",
+            "Gray": "265"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Spellpower Goggles Xtreme",
+        "Category": "Cloth",
+        "Materials": {
+            "Star Ruby": 2,
+            "Thick Leather": 4
+        },
+        "Skill": {
+            "Orange": "225",
+            "Yellow": "245",
+            "Green": "255",
+            "Gray": "265"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Deepdive Helmet",
+        "Category": "Cloth",
+        "Materials": {
+            "Malachite": 4,
+            "Tigerseye": 4,
+            "Truesilver Bar": 1,
+            "Mithril Bar": 8,
+            "Mithril Casing": 1
+        },
+        "Skill": {
+            "Orange": "230",
+            "Yellow": "250",
+            "Green": "260",
+            "Gray": "270"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Rose Colored Goggles",
+        "Category": "Cloth",
+        "Materials": {
+            "Star Ruby": 2,
+            "Thick Leather": 6
+        },
+        "Skill": {
+            "Orange": "230",
+            "Yellow": "250",
+            "Green": "260",
+            "Gray": "270"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Hi-Explosive Bomb",
+        "Category": "Explosive",
+        "Materials": {
+            "Mithril Casing": 2,
+            "Solid Blasting Powder": 2,
+            "Unstable Trigger": 1
+        },
+        "Skill": {
+            "Orange": "235",
+            "Yellow": "235",
+            "Green": "255",
+            "Gray": "275"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Sniper Scope",
+        "Category": "Item enhancement",
+        "Materials": {
+            "Star Ruby": 1,
+            "Truesilver Bar": 2,
+            "Mithril Tube": 1
+        },
+        "Skill": {
+            "Orange": "240",
+            "Yellow": "260",
+            "Green": "270",
+            "Gray": "280"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Green Lens",
+        "Category": "Cloth",
+        "Materials": {
+            "Aquamarine": 3,
+            "Jade": 3,
+            "Heart of the Wild": 2,
+            "Thick Leather": 8,
+            "Wildvine": 2
+        },
+        "Skill": {
+            "Orange": "245",
+            "Yellow": "265",
+            "Green": "275",
+            "Gray": "285"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Dense Blasting Powder",
+        "Category": "Crafting material",
+        "Materials": {
+            "Dense Stone": 2
+        },
+        "Skill": {
+            "Orange": "250",
+            "Yellow": "250",
+            "Green": "255",
+            "Gray": "260"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Dense Dynamite",
+        "Category": "Explosive",
+        "Materials": {
+            "Dense Blasting Powder": 2,
+            "Runecloth": 3
+        },
+        "Skill": {
+            "Orange": "250",
+            "Yellow": "250",
+            "Green": "260",
+            "Gray": "270"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "High-Powered Flashlight",
+        "Category": "Trinket",
+        "Materials": {
+            "Thorium Widget": 4,
+            "Truesilver Bar": 6,
+            "Essence of Fire": 6
+        },
+        "Skill": {
+            "Orange": "250",
+            "Yellow": "270",
+            "Green": "280",
+            "Gray": "290"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Mithril Mechanical Dragonling",
+        "Category": "Trinket",
+        "Materials": {
+            "Star Ruby": 2,
+            "Truesilver Bar": 4,
+            "Mithril Bar": 4,
+            "Goblin Rocket Fuel": 2,
+            "Heart of Fire": 4,
+            "Inlaid Mithril Cylinder": 2
+        },
+        "Skill": {
+            "Orange": "250",
+            "Yellow": "270",
+            "Green": "280",
+            "Gray": "290"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Tranquil Mechanical Yeti",
+        "Category": "Companion",
+        "Materials": {
+            "Cured Rugged Hide": 1,
+            "Globe of Water": 2,
+            "Gold Power Core": 1,
+            "Thorium Widget": 4,
+            "Truesilver Transformer": 2
+        },
+        "Skill": {
+            "Orange": "250",
+            "Yellow": "320",
+            "Green": "330",
+            "Gray": "340"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Truesilver Transformer",
+        "Category": "Crafting material",
+        "Materials": {
+            "Truesilver Bar": 2,
+            "Elemental Air": 1,
+            "Elemental Earth": 2
+        },
+        "Skill": {
+            "Orange": "260",
+            "Yellow": "270",
+            "Green": "275",
+            "Gray": "280"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Gyrofreeze Ice Reflector",
+        "Category": "Trinket",
+        "Materials": {
+            "Blue Sapphire": 2,
+            "Essence of Fire": 4,
+            "Frost Oil": 2,
+            "Icecap": 4,
+            "Thorium Widget": 6,
+            "Truesilver Transformer": 2
+        },
+        "Skill": {
+            "Orange": "260",
+            "Yellow": "280",
+            "Green": "290",
+            "Gray": "300"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Thorium Grenade",
+        "Category": "Explosive",
+        "Materials": {
+            "Thorium Bar": 3,
+            "Dense Blasting Powder": 3,
+            "Runecloth": 3,
+            "Thorium Widget": 1
+        },
+        "Skill": {
+            "Orange": "260",
+            "Yellow": "280",
+            "Green": "290",
+            "Gray": "300"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Thorium Rifle",
+        "Category": "Gun",
+        "Materials": {
+            "Thorium Bar": 4,
+            "Deadly Scope": 1,
+            "Mithril Casing": 2,
+            "Mithril Tube": 2,
+            "Thorium Widget": 2
+        },
+        "Skill": {
+            "Orange": "260",
+            "Yellow": "280",
+            "Green": "290",
+            "Gray": "300"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Thorium Widget",
+        "Category": "Crafting material",
+        "Materials": {
+            "Thorium Bar": 3,
+            "Runecloth": 1
+        },
+        "Skill": {
+            "Orange": "260",
+            "Yellow": "280",
+            "Green": "290",
+            "Gray": "300"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Lifelike Mechanical Toad",
+        "Category": "Companion",
+        "Materials": {
+            "Living Essence": 1,
+            "Gold Power Core": 1,
+            "Rugged Leather": 1,
+            "Thorium Widget": 4
+        },
+        "Skill": {
+            "Orange": "265",
+            "Yellow": "285",
+            "Green": "295",
+            "Gray": "305"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Spellpower Goggles Xtreme Plus",
+        "Category": "Cloth",
+        "Materials": {
+            "Star Ruby": 4,
+            "Spellpower Goggles Xtreme": 1,
+            "Enchanted Leather": 2,
+            "Runecloth": 8
+        },
+        "Skill": {
+            "Orange": "270",
+            "Yellow": "290",
+            "Green": "300",
+            "Gray": "310"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Fused Wiring",
+        "Category": "Crafting material",
+        "Materials": {
+            "Delicate Copper Wire": 3,
+            "Essence of Fire": 2
+        },
+        "Skill": {
+            "Orange": "275",
+            "Yellow": "275",
+            "Green": "280",
+            "Gray": "285"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Powerful Seaforium Charge",
+        "Category": "Explosive",
+        "Materials": {
+            "Dense Blasting Powder": 3,
+            "Refreshing Spring Water": 1,
+            "Rugged Leather": 2,
+            "Thorium Widget": 2
+        },
+        "Skill": {
+            "Orange": "275",
+            "Yellow": "275",
+            "Green": "285",
+            "Gray": "295"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Steam Tonk Controller",
+        "Category": "Device",
+        "Materials": {
+            "Mithril Bar": 3,
+            "Gold Power Core": 1
+        },
+        "Skill": {
+            "Orange": "275",
+            "Yellow": "275",
+            "Green": "280",
+            "Gray": "285"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Major Recombobulator",
+        "Category": "Trinket",
+        "Materials": {
+            "Runecloth": 2,
+            "Thorium Tube": 2,
+            "Truesilver Transformer": 1
+        },
+        "Skill": {
+            "Orange": "275",
+            "Yellow": "285",
+            "Green": "290",
+            "Gray": "295"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Dark Iron Rifle",
+        "Category": "Gun",
+        "Materials": {
+            "Blue Sapphire": 2,
+            "Large Opal": 2,
+            "Dark Iron Bar": 6,
+            "Deadly Scope": 2,
+            "Rugged Leather": 4,
+            "Thorium Tube": 2
+        },
+        "Skill": {
+            "Orange": "275",
+            "Yellow": "295",
+            "Green": "305",
+            "Gray": "315"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Masterwork Target Dummy",
+        "Category": "Device",
+        "Materials": {
+            "Truesilver Bar": 1,
+            "Mithril Casing": 1,
+            "Rugged Leather": 2,
+            "Runecloth": 4,
+            "Thorium Tube": 1,
+            "Thorium Widget": 2
+        },
+        "Skill": {
+            "Orange": "275",
+            "Yellow": "295",
+            "Green": "305",
+            "Gray": "315"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Thorium Tube",
+        "Category": "Crafting material",
+        "Materials": {
+            "Thorium Bar": 6
+        },
+        "Skill": {
+            "Orange": "275",
+            "Yellow": "295",
+            "Green": "305",
+            "Gray": "315"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Dark Iron Bomb",
+        "Category": "Explosive",
+        "Materials": {
+            "Dark Iron Bar": 1,
+            "Dense Blasting Powder": 3,
+            "Runecloth": 3,
+            "Thorium Widget": 2
+        },
+        "Skill": {
+            "Orange": "285",
+            "Yellow": "305",
+            "Green": "315",
+            "Gray": "325"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Delicate Arcanite Converter",
+        "Category": "Crafting material",
+        "Materials": {
+            "Arcanite Bar": 1,
+            "Ironweb Spider Silk": 1
+        },
+        "Skill": {
+            "Orange": "285",
+            "Yellow": "305",
+            "Green": "315",
+            "Gray": "325"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Hyper-Radiant Flame Reflector",
+        "Category": "Trinket",
+        "Materials": {
+            "Azerothian Diamond": 2,
+            "Star Ruby": 4,
+            "Dark Iron Bar": 4,
+            "Essence of Water": 6,
+            "Truesilver Transformer": 3
+        },
+        "Skill": {
+            "Orange": "290",
+            "Yellow": "310",
+            "Green": "320",
+            "Gray": "330"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Master Engineer's Goggles",
+        "Category": "Cloth",
+        "Materials": {
+            "Huge Emerald": 2,
+            "Fire Goggles": 1,
+            "Enchanted Leather": 4
+        },
+        "Skill": {
+            "Orange": "290",
+            "Yellow": "310",
+            "Green": "320",
+            "Gray": "330"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Voice Amplification Modulator",
+        "Category": "Necklace",
+        "Materials": {
+            "Large Opal": 1,
+            "Delicate Arcanite Converter": 2,
+            "Gold Power Core": 1,
+            "Thorium Widget": 1
+        },
+        "Skill": {
+            "Orange": "290",
+            "Yellow": "310",
+            "Green": "320",
+            "Gray": "330"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Arcane Bomb",
+        "Category": "Explosive",
+        "Materials": {
+            "Thorium Bar": 3,
+            "Delicate Arcanite Converter": 1,
+            "Runecloth": 1
+        },
+        "Skill": {
+            "Orange": "300",
+            "Yellow": "320",
+            "Green": "330",
+            "Gray": "340"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Arcanite Dragonling",
+        "Category": "Trinket",
+        "Materials": {
+            "Delicate Arcanite Converter": 4,
+            "Mithril Mechanical Dragonling": 1
+        },
+        "Skill": {
+            "Orange": "300",
+            "Yellow": "320",
+            "Green": "330",
+            "Gray": "340"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Biznicks 247x128 Accurascope",
+        "Category": "Item enhancement",
+        "Materials": {
+            "Dark Iron Bar": 6,
+            "Lava Core": 2,
+            "Essence of Earth": 2,
+            "Delicate Arcanite Converter": 4,
+            "Thorium Tube": 1
+        },
+        "Skill": {
+            "Orange": "300",
+            "Yellow": "320",
+            "Green": "330",
+            "Gray": "340"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Bloodvine Goggles",
+        "Category": "Cloth",
+        "Materials": {
+            "Souldarite": 5,
+            "Bloodvine": 4,
+            "Delicate Arcanite Converter": 2,
+            "Enchanted Leather": 4,
+            "Powerful Mojo": 8
+        },
+        "Skill": {
+            "Orange": "300",
+            "Yellow": "320",
+            "Green": "330",
+            "Gray": "340"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Bloodvine Lens",
+        "Category": "Leather",
+        "Materials": {
+            "Souldarite": 5,
+            "Bloodvine": 5,
+            "Delicate Arcanite Converter": 1,
+            "Enchanted Leather": 4,
+            "Powerful Mojo": 8
+        },
+        "Skill": {
+            "Orange": "300",
+            "Yellow": "320",
+            "Green": "330",
+            "Gray": "340"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Core Marksman Rifle",
+        "Category": "Gun",
+        "Materials": {
+            "Fiery Core": 4,
+            "Lava Core": 2,
+            "Arcanite Bar": 6,
+            "Delicate Arcanite Converter": 2,
+            "Thorium Tube": 2
+        },
+        "Skill": {
+            "Orange": "300",
+            "Yellow": "320",
+            "Green": "330",
+            "Gray": "340"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Field Repair Bot 74A",
+        "Category": "Device",
+        "Materials": {
+            "Thorium Bar": 6,
+            "Fused Wiring": 1
+        },
+        "Skill": {
+            "Orange": "300",
+            "Yellow": "320",
+            "Green": "330",
+            "Gray": "340"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Flawless Arcanite Rifle",
+        "Category": "Gun",
+        "Materials": {
+            "Azerothian Diamond": 2,
+            "Arcanite Bar": 0,
+            "Essence of Earth": 2,
+            "Essence of Fire": 2,
+            "Enchanted Leather": 2,
+            "Thorium Tube": 2
+        },
+        "Skill": {
+            "Orange": "300",
+            "Yellow": "320",
+            "Green": "330",
+            "Gray": "340"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Force Reactive Disk",
+        "Category": "Shield",
+        "Materials": {
+            "Arcanite Bar": 6,
+            "Essence of Air": 8,
+            "Essence of Earth": 8,
+            "Living Essence": 2,
+            "Delicate Arcanite Converter": 2
+        },
+        "Skill": {
+            "Orange": "300",
+            "Yellow": "320",
+            "Green": "330",
+            "Gray": "340"
+        },
+        "Source": ""
+    },
+    {
+        "Item": "Ultra-Flash Shadow Reflector",
+        "Category": "Trinket",
+        "Materials": {
+            "Azerothian Diamond": 2,
+            "Large Opal": 2,
+            "Dark Iron Bar": 8,
+            "Essence of Undeath": 4,
+            "Living Essence": 6,
+            "Truesilver Transformer": 4
+        },
+        "Skill": {
+            "Orange": "300",
+            "Yellow": "320",
+            "Green": "330",
+            "Gray": "340"
+        },
+        "Source": ""
+    }
+]

@@ -2,7 +2,7 @@ from collections import namedtuple
 
 
 # Crafting material category name
-CATEGORY_NAME_MATERIAL = "Crafting Material"
+CATEGORY_NAME_MATERIAL = "Crafting material"
 
 # Pattern color skill-up probabilities
 PROB_ORANGE = 1.00

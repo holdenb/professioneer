@@ -14,7 +14,7 @@ def main(args: dict) -> None:
         market_data = {k: MarketData.schema().load(v) for k, v in market_data.items()}
 
     sim = Simulation(crafting_patterns, market_data)
-    sim.run_simulation(RunConfigs(sim_start_lv=1, sim_end_lv=300, simulations=1))
+    sim.run_simulation(RunConfigs(sim_start_lv=1, sim_end_lv=300, simulations=2))
 
 
 if __name__ == "__main__":
