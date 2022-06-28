@@ -195,9 +195,9 @@ class Simulation:
 
         # Post-simulation analysis
         cost_np_array = np.array(list(sim_costs.values()))
-        cost_fifth_p = np.percentile(cost_np_array, 5)
-        cost_median = np.median(cost_np_array)
-        cost_ninety_fifth_p = np.percentile(cost_np_array, 95)
+        cost_fifth_p = round(np.percentile(cost_np_array, 5), 3)
+        cost_median = round(np.median(cost_np_array), 3)
+        cost_ninety_fifth_p = round(np.percentile(cost_np_array, 95), 3)
 
         print('\nSimulation Results:')
         print(f'5th percentile cost: {cost_fifth_p}')
