@@ -1,7 +1,7 @@
-import math
 import random
 import seaborn as sns
 import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
 from dataclasses import dataclass, KW_ONLY
 from data.datamodels import CraftingPattern
@@ -163,19 +163,23 @@ class Simulation:
 
     def run_simulation(self, config: RunConfigs) -> None:
         sim_costs = {}
+        sim_crafting_paths = {}
         for i in range(config.simulations):
             current_lv = config.sim_start_lv
             total_cost = 0
             crafting_path = []
             while current_lv != config.sim_end_lv:
                 step = self.step(current_lv)
-                # Replace level & add the cost
                 current_lv = step.level
                 total_cost += step.cost
                 crafting_path.append(step.pattern_name)
 
             cost_gold = ((total_cost / 100) / 100)
+
+            # Aggregate the total cost and the the crafting path
+            # of each simulation that runs
             sim_costs[i+1] = cost_gold
+            sim_crafting_paths[i+1] = crafting_path
 
             # print(f'lv: {current_lv} | cost: {cost_gold}')
 
@@ -198,8 +202,18 @@ class Simulation:
         # sns.set_theme(style="whitegrid")
         # sns.barplot(x="sim_run", y="cost_g", data=sim_costs_df)
         # plt.show()
-            print(sim_costs)
+            print(f'Simulation: {i+1} | Cost: {cost_gold}')
 
-        sim_costs_df = pd.DataFrame(list(sim_costs.values()), columns=['cost_g'])
-        sns.histplot(sim_costs_df.cost_g, kde=True)
-        plt.show()
+        # Post-simulation analysis
+        cost_np_array = np.array(list(sim_costs.values()))
+        cost_fifth_p = np.percentile(cost_np_array, 5)
+        cost_median = np.median(cost_np_array)
+        cost_ninety_fifth_p = np.percentile(cost_np_array, 95)
+        
+        print(f'5th percentile cost: {cost_fifth_p}')
+        print(f'Median cost: {cost_median}')
+        print(f'95th percentile cost: {cost_ninety_fifth_p}')
+
+        # sim_costs_df = pd.DataFrame(list(sim_costs.values()), columns=['cost_g'])
+        # sns.histplot(sim_costs_df.cost_g, kde=True)
+        # plt.show()

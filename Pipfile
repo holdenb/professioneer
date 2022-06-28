@@ -12,6 +12,7 @@ seaborn = "==0.11.2"
 ratelimiter = "==1.2.0.post0"
 aiohttp = "==3.8.1"
 dataclasses-json = "==0.5.7"
+numpy = "==1.23.0"
 
 [dev-packages]
 pylint = "*"
