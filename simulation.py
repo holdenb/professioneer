@@ -80,6 +80,20 @@ class Simulation:
             else:
                 freq[item] = 1
         return freq
+    
+    def fmt_freq_dict_to_include_total_patterns(self, freq_dict: dict) -> dict:
+        freq_total_patterns = {}
+        # Build a base dict that includes 0 counts of every
+        # available pattern
+        for (name, _) in self.patterns.items():
+            freq_total_patterns[name] = 0
+            
+        # Augment the base dict to include counts for everything
+        # in our crafting path
+        for (name, ct) in freq_dict.items():
+            freq_total_patterns[name] = ct
+
+        return freq_total_patterns
 
     def add_to_bank(self, name: str) -> None:
         if name not in self.cm_bank.keys():
