@@ -1,5 +1,8 @@
 import math
 import random
+import seaborn as sns
+import pandas as pd
+import matplotlib.pyplot as plt
 from dataclasses import dataclass, KW_ONLY
 from data.datamodels import CraftingPattern
 from utils import compute_wci, generate_skill_up_fn, EMPTY_MAT_COST, CATEGORY_NAME_MATERIAL
@@ -159,7 +162,8 @@ class Simulation:
         return SimulationStep(updated_lv, cost, name)
 
     def run_simulation(self, config: RunConfigs) -> None:
-        for _ in range(config.simulations):
+        sim_costs = {}
+        for i in range(config.simulations):
             current_lv = config.sim_start_lv
             total_cost = 0
             crafting_path = []
@@ -171,14 +175,31 @@ class Simulation:
                 crafting_path.append(step.pattern_name)
 
             cost_gold = ((total_cost / 100) / 100)
+            sim_costs[i+1] = cost_gold
 
-            print(f'lv: {current_lv} | cost: {cost_gold}')
+            # print(f'lv: {current_lv} | cost: {cost_gold}')
 
-            # Frequency count for debugging
-            freq = {}
-            for item in crafting_path:
-                if item in freq:
-                    freq[item] += 1
-                else:
-                    freq[item] = 1
-            print(f'Path: {freq}')
+            # # Frequency count for debugging
+            # freq = {}
+            # for item in crafting_path:
+            #     if item in freq:
+            #         freq[item] += 1
+            #     else:
+            #         freq[item] = 1
+            # print(f'Path: {freq}')
+
+            # crafting_path_df = pd.DataFrame(list(zip(freq.keys(), freq.values())), columns =['pattern', 'num_crafted'])
+            # sns.set_theme(style="whitegrid")
+            # sns.barplot(x="num_crafted", y="pattern", data=crafting_path_df)
+            # plt.show()
+
+        # sim_costs = dict(sorted(sim_costs.items(), key=lambda x: x[1]))
+        # sim_costs_df = pd.DataFrame(list(zip(sim_costs.keys(), sim_costs.values())), columns =['sim_run', 'cost_g'])
+        # sns.set_theme(style="whitegrid")
+        # sns.barplot(x="sim_run", y="cost_g", data=sim_costs_df)
+        # plt.show()
+            print(sim_costs)
+
+        sim_costs_df = pd.DataFrame(list(sim_costs.values()), columns=['cost_g'])
+        sns.histplot(sim_costs_df.cost_g, kde=True)
+        plt.show()

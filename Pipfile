@@ -9,6 +9,9 @@ requests = "*"
 dataclasses-json = "*"
 aiohttp = "*"
 ratelimiter = "*"
+seaborn = "*"
+pandas = "*"
+matplotlib = "*"
 
 [dev-packages]
 pylint = "*"
