@@ -71,6 +71,16 @@ class Simulation:
 
         return sum_cost_mapping
 
+    @staticmethod
+    def to_frequency_dict(li: list) -> dict:
+        freq = {}
+        for item in li:
+            if item in freq:
+                freq[item] += 1
+            else:
+                freq[item] = 1
+        return freq
+
     def add_to_bank(self, name: str) -> None:
         if name not in self.cm_bank.keys():
             self.cm_bank[name] = 1
@@ -174,34 +184,13 @@ class Simulation:
                 total_cost += step.cost
                 crafting_path.append(step.pattern_name)
 
-            cost_gold = ((total_cost / 100) / 100)
+            cost_gold = round(((total_cost / 100) / 100), 3)
 
             # Aggregate the total cost and the the crafting path
             # of each simulation that runs
             sim_costs[i+1] = cost_gold
             sim_crafting_paths[i+1] = crafting_path
 
-            # print(f'lv: {current_lv} | cost: {cost_gold}')
-
-            # # Frequency count for debugging
-            # freq = {}
-            # for item in crafting_path:
-            #     if item in freq:
-            #         freq[item] += 1
-            #     else:
-            #         freq[item] = 1
-            # print(f'Path: {freq}')
-
-            # crafting_path_df = pd.DataFrame(list(zip(freq.keys(), freq.values())), columns =['pattern', 'num_crafted'])
-            # sns.set_theme(style="whitegrid")
-            # sns.barplot(x="num_crafted", y="pattern", data=crafting_path_df)
-            # plt.show()
-
-        # sim_costs = dict(sorted(sim_costs.items(), key=lambda x: x[1]))
-        # sim_costs_df = pd.DataFrame(list(zip(sim_costs.keys(), sim_costs.values())), columns =['sim_run', 'cost_g'])
-        # sns.set_theme(style="whitegrid")
-        # sns.barplot(x="sim_run", y="cost_g", data=sim_costs_df)
-        # plt.show()
             print(f'Simulation: {i+1} | Cost: {cost_gold}')
 
         # Post-simulation analysis
@@ -209,11 +198,52 @@ class Simulation:
         cost_fifth_p = np.percentile(cost_np_array, 5)
         cost_median = np.median(cost_np_array)
         cost_ninety_fifth_p = np.percentile(cost_np_array, 95)
-        
+
+        print('\nSimulation Results:')
         print(f'5th percentile cost: {cost_fifth_p}')
         print(f'Median cost: {cost_median}')
         print(f'95th percentile cost: {cost_ninety_fifth_p}')
 
-        # sim_costs_df = pd.DataFrame(list(sim_costs.values()), columns=['cost_g'])
-        # sns.histplot(sim_costs_df.cost_g, kde=True)
-        # plt.show()
+        # Display the crafting routes that correspond to lower/upper percentiles
+        # along with the median
+        (cost_fifth_p_key, _) = min(sim_costs.items(), key=lambda x: abs(cost_fifth_p - x[1]))
+        path_from_cost_fifth_p_key = Simulation.to_frequency_dict(sim_crafting_paths[cost_fifth_p_key])
+        print(f'\nPath associated with ~5th percentile cost: {path_from_cost_fifth_p_key}')
+
+        (cost_median_p_key, _) = min(sim_costs.items(), key=lambda x: abs(cost_median - x[1]))
+        path_from_cost_median_p_key = Simulation.to_frequency_dict(sim_crafting_paths[cost_median_p_key])
+        print(f'\nPath associated with approx. median cost: {path_from_cost_median_p_key}')
+
+        (cost_ninety_fifth_p_key, _) = min(sim_costs.items(), key=lambda x: abs(cost_ninety_fifth_p - x[1]))
+        path_from_cost_ninety_fifth_p_key = Simulation.to_frequency_dict(sim_crafting_paths[cost_ninety_fifth_p_key])
+        print(f'\nPath associated with ~95th percentile cost: {path_from_cost_ninety_fifth_p_key}')
+
+        plt.figure(figsize=(20, 10))
+        path_from_cost_fifth_p_key_df = pd.DataFrame(list(zip(path_from_cost_fifth_p_key.keys(), path_from_cost_fifth_p_key.values())), columns =['pattern', 'num_crafted'])
+        sns.set_theme(style="whitegrid")
+        sns.barplot(x="num_crafted", y="pattern", data=path_from_cost_fifth_p_key_df).set(title='Path: ~5th Percentile')
+        plt.savefig('figures/sb_barplot_fifth_p.png')
+
+        plt.clf()
+
+        plt.figure(figsize=(20, 10))
+        path_from_cost_median_p_key_df = pd.DataFrame(list(zip(path_from_cost_median_p_key.keys(), path_from_cost_median_p_key.values())), columns =['pattern', 'num_crafted'])
+        sns.set_theme(style="whitegrid")
+        sns.barplot(x="num_crafted", y="pattern", data=path_from_cost_median_p_key_df).set(title='Path: Approx. Median')
+        plt.savefig('figures/sb_barplot_median_p.png')
+
+        plt.clf()
+
+        plt.figure(figsize=(20, 10))
+        path_from_cost_ninety_fifth_p_key_df = pd.DataFrame(list(zip(path_from_cost_ninety_fifth_p_key.keys(), path_from_cost_ninety_fifth_p_key.values())), columns =['pattern', 'num_crafted'])
+        sns.set_theme(style="whitegrid")
+        sns.barplot(x="num_crafted", y="pattern", data=path_from_cost_ninety_fifth_p_key_df).set(title='Path: ~95th Percentile')
+        plt.savefig('figures/sb_barplot_ninety_fifth_p.png')
+
+        plt.clf()
+
+        # Plot the cost distribution across all simulations
+        plt.figure(figsize=(20, 10))
+        sim_costs_df = pd.DataFrame(list(sim_costs.values()), columns=['cost_g'])
+        sns.histplot(sim_costs_df.cost_g, kde=True).set(title='Crafting Path Cost Distribution')
+        plt.savefig('figures/sb_histplot_cost_dist.png')
