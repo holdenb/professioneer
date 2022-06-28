@@ -21,6 +21,14 @@ class SimulationStep:
     level: int
     cost: int
     pattern_name: str
+    pattern_sort_index: int
+    
+    
+@dataclass()
+class PathStepPattern:
+    pattern_name: str
+    pattern_sort_index: int
+    num_times_crafted: int
 
 
 class Simulation:
@@ -180,10 +188,13 @@ class Simulation:
         p_roll = random.randrange(1, 1001)
         should_lv = p_roll <= p_craft
         updated_lv = level + 1 if should_lv else level
+        
+        # Find the index of the pattern so we can sort outputs
+        pattern_index = self.patterns.keys().index(name)
 
         # Cost will stay the same regardless if we are "able" to
         # craft the pattern
-        return SimulationStep(updated_lv, cost, name)
+        return SimulationStep(updated_lv, cost, name, pattern_index)
 
     def run_simulation(self, config: RunConfigs) -> None:
         sim_costs = {}
@@ -232,8 +243,11 @@ class Simulation:
         path_from_cost_ninety_fifth_p_key = Simulation.to_frequency_dict(sim_crafting_paths[cost_ninety_fifth_p_key])
         print(f'\nPath associated with ~95th percentile cost: {path_from_cost_ninety_fifth_p_key}')
 
+        # For ease of viewing, we want to normalize the keys between each of the figures
+        keys_norm = set(list(path_from_cost_fifth_p_key.keys()) + list(path_from_cost_median_p_key.keys()) + list(path_from_cost_ninety_fifth_p_key.keys()))
+        
         plt.figure(figsize=(20, 10))
-        path_from_cost_fifth_p_key_df = pd.DataFrame(list(zip(path_from_cost_fifth_p_key.keys(), path_from_cost_fifth_p_key.values())), columns =['pattern', 'num_crafted'])
+        path_from_cost_fifth_p_key_df = pd.DataFrame(list(zip(keys_norm, path_from_cost_fifth_p_key.values())), columns =['pattern', 'num_crafted'])
         sns.set_theme(style="whitegrid")
         sns.barplot(x="num_crafted", y="pattern", data=path_from_cost_fifth_p_key_df).set(title='Path: ~5th Percentile')
         plt.savefig('figures/sb_barplot_fifth_p.png')
@@ -241,7 +255,7 @@ class Simulation:
         plt.clf()
 
         plt.figure(figsize=(20, 10))
-        path_from_cost_median_p_key_df = pd.DataFrame(list(zip(path_from_cost_median_p_key.keys(), path_from_cost_median_p_key.values())), columns =['pattern', 'num_crafted'])
+        path_from_cost_median_p_key_df = pd.DataFrame(list(zip(keys_norm, path_from_cost_median_p_key.values())), columns =['pattern', 'num_crafted'])
         sns.set_theme(style="whitegrid")
         sns.barplot(x="num_crafted", y="pattern", data=path_from_cost_median_p_key_df).set(title='Path: Approx. Median')
         plt.savefig('figures/sb_barplot_median_p.png')
@@ -249,7 +263,7 @@ class Simulation:
         plt.clf()
 
         plt.figure(figsize=(20, 10))
-        path_from_cost_ninety_fifth_p_key_df = pd.DataFrame(list(zip(path_from_cost_ninety_fifth_p_key.keys(), path_from_cost_ninety_fifth_p_key.values())), columns =['pattern', 'num_crafted'])
+        path_from_cost_ninety_fifth_p_key_df = pd.DataFrame(list(zip(keys_norm, path_from_cost_ninety_fifth_p_key.values())), columns =['pattern', 'num_crafted'])
         sns.set_theme(style="whitegrid")
         sns.barplot(x="num_crafted", y="pattern", data=path_from_cost_ninety_fifth_p_key_df).set(title='Path: ~95th Percentile')
         plt.savefig('figures/sb_barplot_ninety_fifth_p.png')
