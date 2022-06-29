@@ -30,8 +30,6 @@ class Simulation:
             Simulation.augment_patterns_to_include_cost(patterns, market)
         self.probability_fn_mapping = \
             Simulation.map_probability_fns(self.patterns)
-        # self.sum_costs = \
-        #     Simulation.map_sum_costs(self.patterns, self.market)
 
     @staticmethod
     def map_probability_fns(patterns: dict) -> dict:
@@ -51,25 +49,6 @@ class Simulation:
         patterns = {p.item: p for p in patterns}
 
         return patterns
-
-    @staticmethod
-    def map_sum_costs(patterns: dict, market: dict) -> dict:
-        sum_cost_mapping = {}
-        for pat in patterns:
-            mats = pat.materials
-            sum_cost = 0
-            for (name, qty) in mats.items():
-                unit_cost = market[name].market_value
-                if unit_cost is None:
-                    unit_cost = EMPTY_MAT_COST
-                else:
-                    unit_cost *= qty
-
-                sum_cost += unit_cost
-
-            sum_cost_mapping[pat.item] = sum_cost
-
-        return sum_cost_mapping
 
     @staticmethod
     def to_frequency_dict(li: list) -> dict:
@@ -248,6 +227,8 @@ class Simulation:
         path_from_cost_fifth_p_key = Simulation.fmt_freq_dict_based_on_ordered_key_list(keys_norm, path_from_cost_fifth_p_key)
         path_from_cost_median_p_key = Simulation.fmt_freq_dict_based_on_ordered_key_list(keys_norm, path_from_cost_median_p_key)
         path_from_cost_ninety_fifth_p_key = Simulation.fmt_freq_dict_based_on_ordered_key_list(keys_norm, path_from_cost_ninety_fifth_p_key)
+
+        # TODO clean up and function out the plotting and output
 
         plt.figure(figsize=(20, 10))
         path_from_cost_fifth_p_key_df = pd.DataFrame(list(zip(keys_norm, path_from_cost_fifth_p_key.values())), columns =['pattern', 'num_crafted'])
