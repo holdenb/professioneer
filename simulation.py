@@ -80,20 +80,27 @@ class Simulation:
             else:
                 freq[item] = 1
         return freq
-    
-    def fmt_freq_dict_to_include_total_patterns(self, freq_dict: dict) -> dict:
-        freq_total_patterns = {}
-        # Build a base dict that includes 0 counts of every
-        # available pattern
-        for (name, _) in self.patterns.items():
-            freq_total_patterns[name] = 0
-            
-        # Augment the base dict to include counts for everything
-        # in our crafting path
-        for (name, ct) in freq_dict.items():
-            freq_total_patterns[name] = ct
 
-        return freq_total_patterns
+    @staticmethod
+    def fmt_freq_dict_based_on_ordered_key_list(ordered_keys: list, freq_dict_to_sort: dict) -> dict:
+        sorted_dict = {}
+        for key in ordered_keys:
+            if key in freq_dict_to_sort:
+                sorted_dict[key] = freq_dict_to_sort[key]
+            else:
+                sorted_dict[key] = 0
+        return sorted_dict
+
+    def sort_pattern_keys(self, keys: list) -> list:
+        key_index_map = {}
+        all_keys = list(self.patterns.keys())
+        for key in keys:
+            i = all_keys.index(key)
+            key_index_map[key] = i
+        # Sort dict based on values
+        key_index_map = dict(sorted(key_index_map.items(), key=lambda x: x[1]))
+
+        return list(key_index_map.keys())
 
     def add_to_bank(self, name: str) -> None:
         if name not in self.cm_bank.keys():
@@ -218,6 +225,8 @@ class Simulation:
         print(f'Median cost: {cost_median}')
         print(f'95th percentile cost: {cost_ninety_fifth_p}')
 
+        # TODO output JSON with the route data before we normalize
+
         # Display the crafting routes that correspond to lower/upper percentiles
         # along with the median
         (cost_fifth_p_key, _) = min(sim_costs.items(), key=lambda x: abs(cost_fifth_p - x[1]))
@@ -232,26 +241,34 @@ class Simulation:
         path_from_cost_ninety_fifth_p_key = Simulation.to_frequency_dict(sim_crafting_paths[cost_ninety_fifth_p_key])
         print(f'\nPath associated with ~95th percentile cost: {path_from_cost_ninety_fifth_p_key}')
 
+        # For ease of viewing, we want to normalize the keys between each of the figures
+        keys_norm = set(list(path_from_cost_fifth_p_key.keys()) + list(path_from_cost_median_p_key.keys()) + list(path_from_cost_ninety_fifth_p_key.keys()))
+        keys_norm = self.sort_pattern_keys(keys_norm)
+        
+        path_from_cost_fifth_p_key = Simulation.fmt_freq_dict_based_on_ordered_key_list(keys_norm, path_from_cost_fifth_p_key)
+        path_from_cost_median_p_key = Simulation.fmt_freq_dict_based_on_ordered_key_list(keys_norm, path_from_cost_median_p_key)
+        path_from_cost_ninety_fifth_p_key = Simulation.fmt_freq_dict_based_on_ordered_key_list(keys_norm, path_from_cost_ninety_fifth_p_key)
+
         plt.figure(figsize=(20, 10))
-        path_from_cost_fifth_p_key_df = pd.DataFrame(list(zip(path_from_cost_fifth_p_key.keys(), path_from_cost_fifth_p_key.values())), columns =['pattern', 'num_crafted'])
+        path_from_cost_fifth_p_key_df = pd.DataFrame(list(zip(keys_norm, path_from_cost_fifth_p_key.values())), columns =['pattern', 'num_crafted'])
         sns.set_theme(style="whitegrid")
-        sns.barplot(x="num_crafted", y="pattern", data=path_from_cost_fifth_p_key_df).set(title='Path: ~5th Percentile')
+        sns.barplot(x="num_crafted", y="pattern", data=path_from_cost_fifth_p_key_df).set(title='Patterns Crafted: ~5th Percentile')
         plt.savefig('figures/sb_barplot_fifth_p.png')
 
         plt.clf()
 
         plt.figure(figsize=(20, 10))
-        path_from_cost_median_p_key_df = pd.DataFrame(list(zip(path_from_cost_median_p_key.keys(), path_from_cost_median_p_key.values())), columns =['pattern', 'num_crafted'])
+        path_from_cost_median_p_key_df = pd.DataFrame(list(zip(keys_norm, path_from_cost_median_p_key.values())), columns =['pattern', 'num_crafted'])
         sns.set_theme(style="whitegrid")
-        sns.barplot(x="num_crafted", y="pattern", data=path_from_cost_median_p_key_df).set(title='Path: Approx. Median')
+        sns.barplot(x="num_crafted", y="pattern", data=path_from_cost_median_p_key_df).set(title='Patterns Crafted: Approx. Median')
         plt.savefig('figures/sb_barplot_median_p.png')
 
         plt.clf()
 
         plt.figure(figsize=(20, 10))
-        path_from_cost_ninety_fifth_p_key_df = pd.DataFrame(list(zip(path_from_cost_ninety_fifth_p_key.keys(), path_from_cost_ninety_fifth_p_key.values())), columns =['pattern', 'num_crafted'])
+        path_from_cost_ninety_fifth_p_key_df = pd.DataFrame(list(zip(keys_norm, path_from_cost_ninety_fifth_p_key.values())), columns =['pattern', 'num_crafted'])
         sns.set_theme(style="whitegrid")
-        sns.barplot(x="num_crafted", y="pattern", data=path_from_cost_ninety_fifth_p_key_df).set(title='Path: ~95th Percentile')
+        sns.barplot(x="num_crafted", y="pattern", data=path_from_cost_ninety_fifth_p_key_df).set(title='Patterns Crafted: ~95th Percentile')
         plt.savefig('figures/sb_barplot_ninety_fifth_p.png')
 
         plt.clf()
