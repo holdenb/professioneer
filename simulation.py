@@ -123,9 +123,6 @@ class Simulation:
         # Filter out 0 probability patterns
         probabilities = dict(filter(lambda x: x[1] != 0.0, probabilities.items()))
 
-        def skip_bank_check(_) -> bool:
-            return False
-
         # Compute cost for all patterns that match those where P != 0
         # and then use the cost to create a WCI score (worthy crafting index score)
         # for each of those patterns
@@ -138,17 +135,17 @@ class Simulation:
             # Return False from bank if material is not used in
             # future crafting scenarios
             #
-            # Category will not relate to crafting, thus we know that this pattern
-            # may include material=Crafting within the pattern
+            # Category will not relate to crafting; We know that this pattern
+            # may include a meta material as a reagent
             bank_fn = self.is_in_bank \
-                if is_not_m_material else skip_bank_check
+                if is_not_m_material else lambda _ : False
 
             (score, cost) = self.compute_score(pattern, p_crafting, bank_fn)
             wci_mapping[k] = (score, cost)
 
         # Select the max cost from the wci_mapping as the pattern that
-        # we will choose to craft. Remember: Max cost means we're MAXIMIZING a cost function
-        # I.e. the cost function will give us the highest output for low cost/high prob patterns
+        # we will choose to craft. Remember: Max means we're MAXIMIZING a scoring function
+        # I.e. the scoring function will give us the highest output for low cost/high prob patterns
         (name, (score, cost)) = max(wci_mapping.items(), key=lambda x: x[1])
 
         chosen_pattern = self.patterns[name]

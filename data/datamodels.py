@@ -29,6 +29,9 @@ class MarketData:
 @dataclass_json
 @dataclass(frozen=True)
 class MarketItem:
+    """
+    Defines the structure of a market item
+    """    
     slug: str
     item_id: int = field(metadata=config(field_name="itemId"))
     name: str

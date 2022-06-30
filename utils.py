@@ -20,6 +20,10 @@ def compute_wci(sum_cost: float, p_crafting: float, available_mats: bool=True) -
 
 
 def generate_skill_up_fn(pattern_skill: dict):
+    """
+    Generates a skill up curried function based on the skill
+    range of a specific crafting pattern
+    """
     lb_orange = int(pattern_skill['Orange'])
     lb_yellow = int(pattern_skill['Yellow'])
     lb_green = int(pattern_skill['Green'])

@@ -3,6 +3,7 @@
     "python.linting.enabled": true,
     "cSpell.words": [
         "aiohttp",
-        "datamodels"
+        "datamodels",
+        "timerange"
     ]
 }
