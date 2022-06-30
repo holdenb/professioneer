@@ -16,6 +16,18 @@ EMPTY_MAT_COST = 999999999
 
 
 def compute_wci(sum_cost: float, p_crafting: float, available_mats: bool=True) -> float:
+    """
+    Computes the Worthy Crafting Index (WCI) based on cost, probability of
+    crafting, and if we have available materials
+
+    Args:
+        sum_cost (float): Summation of costs of materials for a pattern
+        p_crafting (float): Probability of crafting the pattern
+        available_mats (bool, optional): Do we have available materials? Defaults to True.
+
+    Returns:
+        float: The WCI score (The goal is to maximize this score)
+    """
     return (p_crafting * int(available_mats)) / sum_cost
 
 
@@ -23,6 +35,14 @@ def generate_skill_up_fn(pattern_skill: dict):
     """
     Generates a skill up curried function based on the skill
     range of a specific crafting pattern
+
+    Args:
+        pattern_skill (dict): Dictionary of pattern {skill: value}
+        Ex: {"Orange": "20"}
+
+    Returns:
+        function: A function that computes the probability of leveling
+        based on captured values from that patterns skill range
     """
     lb_orange = int(pattern_skill['Orange'])
     lb_yellow = int(pattern_skill['Yellow'])
