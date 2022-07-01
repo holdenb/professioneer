@@ -1,5 +1,7 @@
 import random
 import json
+import timeit
+import time
 import seaborn as sns
 import pandas as pd
 import numpy as np
@@ -175,11 +177,17 @@ class Simulation:
         sim_costs = {}
         sim_crafting_paths = {}
         sim_crafting_paths_output = {}
+        
+        snapshot_start_time_overall = timeit.default_timer()
+        
         for i in range(config.simulations):
             current_lv = config.sim_start_lv
             total_cost = 0
             crafting_path = []
             crafting_path_output = {}
+            
+            snapshot_start_time_sim = timeit.default_timer()
+            
             while current_lv != config.sim_end_lv:
                 step = self.step(current_lv)
                 current_lv = step.level
@@ -191,6 +199,9 @@ class Simulation:
                 level[step.pattern_name] = qty + 1
                 crafting_path_output[current_lv] = level
 
+            snapshot_end_lv_time = round(timeit.default_timer() - snapshot_start_time_sim, 3)
+            crafting_path_output['sim_path_duration'] = snapshot_end_lv_time
+
             sim_crafting_paths_output[i+1] = crafting_path_output
 
             cost_gold = round(((total_cost / 100) / 100), 3)
@@ -201,6 +212,8 @@ class Simulation:
             sim_crafting_paths[i+1] = crafting_path
 
             print(f'Simulation: {i+1} | Cost: {cost_gold}')
+
+        sim_end_time = round(timeit.default_timer() - snapshot_start_time_overall, 3)
 
         # Post-simulation analysis
         cost_np_array = np.array(list(sim_costs.values()))
@@ -233,10 +246,17 @@ class Simulation:
             output_cost_path['metadata'] = {
                 'lv_start': config.sim_start_lv,
                 'lv_end': config.sim_end_lv,
-                'simulations': config.simulations
+                'simulations': config.simulations,
+                'sim_total_duration': sim_end_time,
+                'sim_path_duration': sim_crafting_paths_output[cost_ninety_fifth_p_key]['sim_path_duration']
             }
+
+            # Reformatting the output so that this key is in the metadata
+            del sim_crafting_paths_output[cost_ninety_fifth_p_key]['sim_path_duration']
+
             output_cost_path['cost'] = cost_ninety_fifth_p
-            output_cost_path['path'] = sim_crafting_paths_output[cost_ninety_fifth_p_key]
+            output_cost_path['path'] = sim_crafting_paths_output[cost_ninety_fifth_p_key]            
+            
             json.dump(output_cost_path, file)
 
         # For ease of viewing, we want to normalize the keys between each of the figures
