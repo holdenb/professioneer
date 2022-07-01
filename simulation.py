@@ -1,4 +1,5 @@
 import random
+import json
 import seaborn as sns
 import pandas as pd
 import numpy as np
@@ -105,7 +106,9 @@ class Simulation:
         pattern_cost = 0
         for (name, qty) in pattern.materials.items():
             in_bank = bank_fn(name)
-            pattern_cost += 0 if in_bank else pattern.cost[name] * qty
+            cost = pattern.cost[name] * qty
+            cost = cost * 0.25 if in_bank else cost
+            pattern_cost += cost
 
         # For now we'll assume all materials are always available
         return (compute_wci(pattern_cost, prob_crafting), pattern_cost)
@@ -171,15 +174,24 @@ class Simulation:
     def run_simulation(self, config: RunConfigs) -> None:
         sim_costs = {}
         sim_crafting_paths = {}
+        sim_crafting_paths_output = {}
         for i in range(config.simulations):
             current_lv = config.sim_start_lv
             total_cost = 0
             crafting_path = []
+            crafting_path_output = {}
             while current_lv != config.sim_end_lv:
                 step = self.step(current_lv)
                 current_lv = step.level
                 total_cost += step.cost
                 crafting_path.append(step.pattern_name)
+
+                level = crafting_path_output.get(current_lv, {})
+                qty = level.get(step.pattern_name, 0)
+                level[step.pattern_name] = qty + 1
+                crafting_path_output[current_lv] = level
+
+            sim_crafting_paths_output[i+1] = crafting_path_output
 
             cost_gold = round(((total_cost / 100) / 100), 3)
 
@@ -201,8 +213,6 @@ class Simulation:
         print(f'Median cost: {cost_median}')
         print(f'95th percentile cost: {cost_ninety_fifth_p}')
 
-        # TODO output JSON with the route data before we normalize
-
         # Display the crafting routes that correspond to lower/upper percentiles
         # along with the median
         (cost_fifth_p_key, _) = min(sim_costs.items(), key=lambda x: abs(cost_fifth_p - x[1]))
@@ -217,10 +227,22 @@ class Simulation:
         path_from_cost_ninety_fifth_p_key = Simulation.to_frequency_dict(sim_crafting_paths[cost_ninety_fifth_p_key])
         print(f'\nPath associated with ~95th percentile cost: {path_from_cost_ninety_fifth_p_key}')
 
+        # Output JSON path data for 95th percentile cost path
+        with open(f'paths/sim-run-{cost_ninety_fifth_p_key}-{config.simulations}-path.json', 'w', encoding='utf-8') as file:
+            output_cost_path = {}
+            output_cost_path['metadata'] = {
+                'lv_start': config.sim_start_lv,
+                'lv_end': config.sim_end_lv,
+                'simulations': config.simulations
+            }
+            output_cost_path['cost'] = cost_ninety_fifth_p
+            output_cost_path['path'] = sim_crafting_paths_output[cost_ninety_fifth_p_key]
+            json.dump(output_cost_path, file)
+
         # For ease of viewing, we want to normalize the keys between each of the figures
         keys_norm = set(list(path_from_cost_fifth_p_key.keys()) + list(path_from_cost_median_p_key.keys()) + list(path_from_cost_ninety_fifth_p_key.keys()))
         keys_norm = self.sort_pattern_keys(keys_norm)
-        
+
         path_from_cost_fifth_p_key = Simulation.fmt_freq_dict_based_on_ordered_key_list(keys_norm, path_from_cost_fifth_p_key)
         path_from_cost_median_p_key = Simulation.fmt_freq_dict_based_on_ordered_key_list(keys_norm, path_from_cost_median_p_key)
         path_from_cost_ninety_fifth_p_key = Simulation.fmt_freq_dict_based_on_ordered_key_list(keys_norm, path_from_cost_ninety_fifth_p_key)

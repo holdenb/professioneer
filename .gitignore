@@ -161,4 +161,4 @@ cython_debug/
 
 # Simulation
 figures/
-routes/
+paths/
