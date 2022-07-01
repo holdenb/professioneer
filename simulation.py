@@ -177,17 +177,17 @@ class Simulation:
         sim_costs = {}
         sim_crafting_paths = {}
         sim_crafting_paths_output = {}
-        
+
         snapshot_start_time_overall = timeit.default_timer()
-        
+
         for i in range(config.simulations):
             current_lv = config.sim_start_lv
             total_cost = 0
             crafting_path = []
             crafting_path_output = {}
-            
+
             snapshot_start_time_sim = timeit.default_timer()
-            
+
             while current_lv != config.sim_end_lv:
                 step = self.step(current_lv)
                 current_lv = step.level
@@ -200,6 +200,7 @@ class Simulation:
                 crafting_path_output[current_lv] = level
 
             snapshot_end_lv_time = round(timeit.default_timer() - snapshot_start_time_sim, 3)
+            print(f'Max lv reached - Duration: {snapshot_end_lv_time}')
             crafting_path_output['sim_path_duration'] = snapshot_end_lv_time
 
             sim_crafting_paths_output[i+1] = crafting_path_output
@@ -222,6 +223,7 @@ class Simulation:
         cost_ninety_fifth_p = round(np.percentile(cost_np_array, 95), 3)
 
         print('\nSimulation Results:')
+        print(f'Duration: {sim_end_time}')
         print(f'5th percentile cost: {cost_fifth_p}')
         print(f'Median cost: {cost_median}')
         print(f'95th percentile cost: {cost_ninety_fifth_p}')
@@ -255,8 +257,8 @@ class Simulation:
             del sim_crafting_paths_output[cost_ninety_fifth_p_key]['sim_path_duration']
 
             output_cost_path['cost'] = cost_ninety_fifth_p
-            output_cost_path['path'] = sim_crafting_paths_output[cost_ninety_fifth_p_key]            
-            
+            output_cost_path['path'] = sim_crafting_paths_output[cost_ninety_fifth_p_key]
+
             json.dump(output_cost_path, file)
 
         # For ease of viewing, we want to normalize the keys between each of the figures
