@@ -1,6 +1,6 @@
 from typing import Optional
 from dataclasses import dataclass, field
-from dataclasses_json import config, dataclass_json
+from dataclass_json import config, dataclass_json
 
 
 @dataclass_json
@@ -15,6 +15,7 @@ class CraftingPattern:
         source: Source of the pattern
         cost: Sum cost of materials relative to market prices (default: 0)
     """
+
     item: str = field(metadata=config(field_name="Item"))
     category: str = field(metadata=config(field_name="Category"))
     materials: dict[str, int] = field(metadata=config(field_name="Materials"))
@@ -37,7 +38,10 @@ class MarketData:
         quantity: Total amount of items within all postings
         scanned_at: Datetime of AH scan (fmt: 2022-06-14T04:42:29.000Z)
     """
-    market_value: Optional[int] = field(metadata=config(field_name="marketValue"))
+
+    market_value: Optional[int] = field(
+        metadata=config(field_name="marketValue")
+    )
     min_buyout: Optional[int] = field(metadata=config(field_name="minBuyout"))
     quantity: Optional[int]
     scanned_at: Optional[str] = field(metadata=config(field_name="scannedAt"))
@@ -56,6 +60,7 @@ class MarketItem:
         data: Optional market data for an item
             Data will be in the format of a list containing MarketData
     """
+
     slug: str
     item_id: int = field(metadata=config(field_name="itemId"))
     name: str

@@ -15,7 +15,9 @@ PROB_ZERO = 0.0
 EMPTY_MAT_COST = 999999999
 
 
-def compute_wci(sum_cost: float, p_crafting: float, available_mats: bool=True) -> float:
+def compute_wci(
+    sum_cost: float, p_crafting: float, available_mats: bool = True
+) -> float:
     """
     Computes the Worthy Crafting Index (WCI) based on cost, probability of
     crafting, and if we have available materials
@@ -44,15 +46,15 @@ def generate_skill_up_fn(pattern_skill: dict):
         function: A function that computes the probability of leveling
         based on captured values from that patterns skill range
     """
-    lb_orange = int(pattern_skill['Orange'])
-    lb_yellow = int(pattern_skill['Yellow'])
-    lb_green = int(pattern_skill['Green'])
-    lb_gray = int(pattern_skill['Gray'])
+    lb_orange = int(pattern_skill["Orange"])
+    lb_yellow = int(pattern_skill["Yellow"])
+    lb_green = int(pattern_skill["Green"])
+    lb_gray = int(pattern_skill["Gray"])
 
     # A skill threshold indicates the lower and upper bound
     # values from which a pattern is still viable to
     # receive a "skill point" from
-    SkillThreshold = namedtuple('SkillThreshold', ['lb', 'ub'])
+    SkillThreshold = namedtuple("SkillThreshold", ["lb", "ub"])
 
     def skill_up_fn(level: int) -> float:
         # Anything below the orange lb is not able to be crafted
